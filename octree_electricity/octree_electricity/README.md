@@ -9,8 +9,6 @@ Machine Learning (101700), IBA. Team: Muhammad Salman Malik, Muhammad Shehryar A
 ## Links
 
 - Final report (PDF): `Final_Report.pdf` in this repository
-- Code repository: <add your GitHub link here>
-- Google Drive copy (optional): <add the link here, or delete this line>
 - Trained model: `model/` folder in this repository (`xgb_model.json` + `pipeline.json`)
 
 ## What the method does
