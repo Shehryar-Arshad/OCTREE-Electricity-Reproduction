@@ -1,0 +1,1093 @@
+{
+ "config": {
+  "seed": 2,
+  "n_iters": 50,
+  "max_features": 2,
+  "use_tree": true,
+  "cart_max_depth": 4,
+  "n_estimators": null,
+  "proposer": "gemini:gemini-3.5-flash-lite"
+ },
+ "baseline": {
+  "train": 0.999523479466297,
+  "val": 0.9082521117608837,
+  "test": 0.9126705653021443
+ },
+ "rounds": [
+  {
+   "target": 9,
+   "trajectory": [
+    {
+     "rule": "x9 = [x4 * x1]",
+     "train": 0.9995667995148154,
+     "val": 0.9094217024041585,
+     "test": 0.9138401559454191,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 0.8566100261039999,
+     "source": "initial"
+    },
+    {
+     "rule": "x9 = [x6 * (x3 + x5)]",
+     "train": 0.9996967596603709,
+     "val": 0.9024041585445094,
+     "test": 0.9072124756335282,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 1.2971156310509506,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4, x6) * (x1 + x3)]",
+     "train": 0.9996967596603709,
+     "val": 0.9034437946718649,
+     "test": 0.9091617933723197,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x9 > 0.01:\n      if x4 > 0.10:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.35:\n        y = 1.\n      else:\n        y = 0.\n  else:\n    if x3 > 0.24:\n      if x3 > 0.86:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.38:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x9 > 0.02:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x1 > 0.00:\n        y = 0.\n      else:\n        y = 1.\n  else:\n    if x7 > 0.41:\n      if x6 > 0.00:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 1.5704707473,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4, np.minimum(x1, x6)) * (x3 + x5 - x2)]",
+     "train": 0.9998700398544447,
+     "val": 0.9057829759584145,
+     "test": 0.91137102014295,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": -0.14159286958133085,
+     "col_max": 1.2590953322955831,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4, x1) * (x3 + x5 - x2) * np.abs(x6 - x7)]",
+     "train": 0.9997400797088892,
+     "val": 0.9069525666016894,
+     "test": 0.9129304743339831,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x3 > 0.24:\n      if x1 > 0.01:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x1 > 0.00:\n        y = 1.\n      else:\n        y = 0.\n  else:\n    if x3 > 0.24:\n      if x3 > 0.86:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.38:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x9 > 0.21:\n    if x1 > 0.88:\n      if x4 > 0.03:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x6 > 0.00:\n        y = 1.\n      else:\n        y = 0.\n  else:\n    if x5 > 0.25:\n      if x1 > 0.47:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": -0.26068655351391473,
+     "col_max": 1.0936865351233127,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4, x1) * (x3 + x5 - x2) * (1.0 - np.abs(x6 - x7))]",
+     "train": 0.9997400797088892,
+     "val": 0.908641975308642,
+     "test": 0.9122807017543859,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": -0.610025915942399,
+     "col_max": 0.945867127430847,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4, x1) * (x3 + x5 - x2) * np.sin(np.pi * x6)]",
+     "train": 0.9996967596603709,
+     "val": 0.907732293697206,
+     "test": 0.9130604288499026,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x3 > 0.24:\n      if x1 > 0.01:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x1 > 0.00:\n        y = 1.\n      else:\n        y = 0.\n  else:\n    if x3 > 0.24:\n      if x3 > 0.86:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.38:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x9 > 0.02:\n    if x1 > 0.88:\n      if x4 > 0.03:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x6 > 0.00:\n        y = 1.\n      else:\n        y = 0.\n  else:\n    if x5 > 0.29:\n      if x1 > 0.47:\n        y = 1.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": -0.013166818253791016,
+     "col_max": 0.7836606531167865,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4, x1) * (x3 + x5 - x2) * np.cos(np.pi * x6) * (1.0 - x7)]",
+     "train": 0.9997833997574077,
+     "val": 0.9074723846653672,
+     "test": 0.9139701104613386,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": -0.6089248530164357,
+     "col_max": 0.9397614007364443,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4, x1) * (x3 + x5 - x2) * np.sin(np.pi * x6) * (1.0 - np.abs(x6 - x7))]",
+     "train": 0.9997833997574077,
+     "val": 0.9065627030539312,
+     "test": 0.9122807017543859,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": -0.0073997676888180874,
+     "col_max": 0.45569324859794347,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4, x1) * (x3 + x5 - x2) * np.exp(-np.abs(x6 - x7)) * np.maximum(x8, 1.0 - x4)]",
+     "train": 0.9997833997574077,
+     "val": 0.9066926575698505,
+     "test": 0.9108512020792723,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": -0.5974705452534944,
+     "col_max": 0.9341558735633361,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4, x1) * (x3 + x5 - x2) * np.exp(-np.abs(x6 - x7)) * np.maximum(x8, 1.0 - x4) * np.tanh(x4 * 10.0)]",
+     "train": 0.9997400797088892,
+     "val": 0.9073424301494477,
+     "test": 0.9131903833658219,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": -0.26161013086861445,
+     "col_max": 0.7143342652783419,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4, x1) * (x3 + x5 - x2) * np.tanh(x4 * x8) * (1.0 - np.abs(x6 - x7))]",
+     "train": 0.9998267198059262,
+     "val": 0.9053931124106562,
+     "test": 0.9135802469135802,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": -0.038659232649917906,
+     "col_max": 0.357521586061607,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4, x1) * (x3 + x5 - x2) * np.cos(np.pi * np.abs(x6 - x7)) * np.maximum(x8, 1.0 - x4)]",
+     "train": 0.9997833997574077,
+     "val": 0.9072124756335282,
+     "test": 0.9111111111111111,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": -0.9639776870682768,
+     "col_max": 0.9558002858826158,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4, x1) * (x3 + x5 - x2) * np.sin(np.pi * x6) * np.maximum(x8, 1.0 - x4)]",
+     "train": 0.9998267198059262,
+     "val": 0.905003248862898,
+     "test": 0.9122807017543859,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x3 > 0.24:\n      if x1 > 0.01:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x1 > 0.00:\n        y = 1.\n      else:\n        y = 0.\n  else:\n    if x3 > 0.24:\n      if x3 > 0.86:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.38:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x9 > 0.02:\n    if x1 > 0.88:\n      if x4 > 0.03:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x6 > 0.00:\n        y = 1.\n      else:\n        y = 0.\n  else:\n    if x5 > 0.29:\n      if x1 > 0.47:\n        y = 1.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": -0.011288126662268414,
+     "col_max": 0.7378055336603109,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4, x1) * (x3 + x5 - x2) * np.sin(np.pi * x4) * np.cos(np.pi * x8)]",
+     "train": 0.9996967596603709,
+     "val": 0.9066926575698505,
+     "test": 0.9112410656270306,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": -1.017339574555997,
+     "col_max": 0.5468409585062316,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.clip(x4 - x1, 0.0, 1.0) * (x3 + x5 - x2) * np.abs(np.sin(np.pi * x6) * np.cos(np.pi * x7)) + np.maximum(x8, x4)]",
+     "train": 0.999523479466297,
+     "val": 0.9061728395061729,
+     "test": 0.9124106562703054,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": 0.032815,
+     "col_max": 1.2264005010614423,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4, x1) * (x3 + x5 - x2) * np.abs(x6 - x7) * np.maximum(x8, 1.0 - x4) * np.tanh(x3 * 10.0) * (1.0 - x2)]",
+     "train": 0.9998267198059262,
+     "val": 0.9070825211176088,
+     "test": 0.9112410656270306,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": -0.02790694230628234,
+     "col_max": 0.8045191661497312,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4, x1) * (x3 + x5 - x2) * np.cos(np.pi * np.maximum(x6, x7)) * np.tanh(x8 + 1.0)]",
+     "train": 0.9997400797088892,
+     "val": 0.9066926575698505,
+     "test": 0.91137102014295,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": -1.0380291613411852,
+     "col_max": 0.9234458613184429,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4, x1) * (x3 + x5 - x2) * np.sin(np.pi * x6) * np.cos(np.pi * x7) * np.maximum(x8, 1.0 - x4)]",
+     "train": 0.9997833997574077,
+     "val": 0.9066926575698505,
+     "test": 0.9117608836907083,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": -0.5812763486415118,
+     "col_max": 0.01534735747821418,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4, x1) * (x3 + x5 - x2) * np.abs(x6 - x7) * x8 * x4]",
+     "train": 0.9998700398544447,
+     "val": 0.905912930474334,
+     "test": 0.9143599740090969,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x3 > 0.24:\n      if x1 > 0.01:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x1 > 0.00:\n        y = 1.\n      else:\n        y = 0.\n  else:\n    if x3 > 0.24:\n      if x3 > 0.86:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.38:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x9 > 0.09:\n    if x1 > 0.88:\n      if x4 > 0.04:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x6 > 0.00:\n        y = 1.\n      else:\n        y = 0.\n  else:\n    if x5 > 0.25:\n      if x1 > 0.46:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": -0.030729766081308747,
+     "col_max": 0.3188607407094168,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4, x1) * (x3 + x5 - x2) * (x8 + 1.0 - np.abs(x6 - x7))]",
+     "train": 0.9997400797088892,
+     "val": 0.907732293697206,
+     "test": 0.9131903833658219,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": -1.2040923020129028,
+     "col_max": 2.0033522556863264,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4, x1) * (x3 + x5 - x2) * np.tanh((x8 + 1.0 - np.abs(x6 - x7)) * 5.0) + x4 * (1.0 - x7)]",
+     "train": 0.9996534396118524,
+     "val": 0.9069525666016894,
+     "test": 0.9102014294996751,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": -0.6611421922092644,
+     "col_max": 1.740600758643223,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4, x1) * (x3 + x5 - x2) * np.sin(np.pi * np.abs(x6 - x7)) * np.maximum(x8, 1.0 - x4)]",
+     "train": 0.9998267198059262,
+     "val": 0.905912930474334,
+     "test": 0.9157894736842105,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": -0.5804379757179552,
+     "col_max": 1.236047195290263,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4, x1) * (x3 + x5 - x2) * np.cos(np.pi * np.abs(x6 - x7)) * (1.0 - np.abs(x4 - x8))]",
+     "train": 0.9998267198059262,
+     "val": 0.9052631578947369,
+     "test": 0.9125406107862248,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": -0.9660788188671509,
+     "col_max": 0.5681822206589666,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4, x1) * (x3 + x5 - x2) * (np.maximum(x8, 1.0 - x4) + np.tanh(x1 * x4))]",
+     "train": 0.9997400797088892,
+     "val": 0.9081221572449643,
+     "test": 0.9118908382066276,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": -0.6806069670448379,
+     "col_max": 1.7819124717263215,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4, x1) * (x3 + x5 - x2) * (np.maximum(x8, 1.0 - x4) + np.sin(np.pi * x6) * (1.0 - x7))]",
+     "train": 0.9997400797088892,
+     "val": 0.9072124756335282,
+     "test": 0.9115009746588694,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": -0.6690409312825942,
+     "col_max": 1.2789475598952973,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4, x1) * (x3 + x5 - x2) * np.tanh(x8 + x6 * (1.0 - x7))]",
+     "train": 0.9997400797088892,
+     "val": 0.9070825211176088,
+     "test": 0.9105912930474334,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": -0.48423372507947815,
+     "col_max": 0.9531037072292818,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4, x1) * (x3 + x5 - x2) * np.tanh(x4 * x8)]",
+     "train": 0.9997833997574077,
+     "val": 0.9057829759584145,
+     "test": 0.9125406107862248,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": -0.06878852303724074,
+     "col_max": 0.5898172657696273,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4, x1) * (x3 + x5 - x2) * np.tanh(x8 + 1.0 - np.abs(x6 - x7))]",
+     "train": 0.9997400797088892,
+     "val": 0.9082521117608837,
+     "test": 0.9116309291747888,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": -0.6438455853519851,
+     "col_max": 1.2194088534758236,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4, x1) * (x3 + x5 - x2) * (x8 + np.sin(np.pi * x6 * x7))]",
+     "train": 0.9997400797088892,
+     "val": 0.905912930474334,
+     "test": 0.9134502923976608,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": -0.6043265985334922,
+     "col_max": 1.1916964147671203,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4, x1) * (x3 + x5 - x2) * (x4 * x8 + x1 * (1.0 - np.abs(x6 - x7)))]",
+     "train": 0.9996967596603709,
+     "val": 0.9066926575698505,
+     "test": 0.9130604288499026,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": -0.5440690844349768,
+     "col_max": 1.3784896292944815,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4, x1) * (x3 + x5 - x2) * (x8 * (1.0 - np.abs(x6 - x7)) + np.tanh(x1 * x4))]",
+     "train": 0.9998267198059262,
+     "val": 0.905003248862898,
+     "test": 0.9141000649772579,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": -0.5547255966610828,
+     "col_max": 1.3105565785862145,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4, x1) * (x3 + x5 - x2) * np.exp(-np.abs(x6 - x7)) * (x8 + np.tanh(x4))]",
+     "train": 0.9998267198059262,
+     "val": 0.905912930474334,
+     "test": 0.9116309291747888,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": -0.5578009473291202,
+     "col_max": 1.1687697669509087,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4, x1) * (x3 + x5 - x2) * np.exp(-np.abs(x6 - x7))]",
+     "train": 0.9997833997574077,
+     "val": 0.90682261208577,
+     "test": 0.9121507472384666,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": -0.6126074630581995,
+     "col_max": 1.0027026308108258,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4, x1) * (x3 + x5 - x2) * np.exp(-np.abs(x6 - x7)) * (x8 + np.tanh(x1 * x4))]",
+     "train": 0.9998267198059262,
+     "val": 0.9070825211176088,
+     "test": 0.9135802469135802,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": -0.5557894301133889,
+     "col_max": 1.1481730478904952,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4, x1) * (x3 + x5 - x2) * np.exp(-np.abs(x6 - x7)) * (x8 + 1.0)]",
+     "train": 0.9998267198059262,
+     "val": 0.9076023391812865,
+     "test": 0.9105912930474334,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": -1.1552745723682516,
+     "col_max": 1.8343347651417494,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4, x1) * (x3 + x5 - x2) * (x8 + 1.0 - np.abs(x6 - x7)) * np.tanh(x4 * x3 + 1e-5)]",
+     "train": 0.9998267198059262,
+     "val": 0.9048732943469786,
+     "test": 0.9083820662768031,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x3 > 0.24:\n      if x1 > 0.01:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x1 > 0.00:\n        y = 1.\n      else:\n        y = 0.\n  else:\n    if x3 > 0.24:\n      if x3 > 0.86:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.38:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x9 > 0.04:\n    if x1 > 0.88:\n      if x9 > 0.10:\n        y = 1.\n      else:\n        y = 0.\n    else:\n      if x6 > 0.00:\n        y = 1.\n      else:\n        y = 0.\n  else:\n    if x7 > 0.41:\n      if x1 > 0.89:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": -0.04183990501111689,
+     "col_max": 0.9571594364013859,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4, x1) * (x3 + x5 - x2) * np.tanh(x8 + 1.0 - np.abs(x6 - x7)) * (x4 * x4 + x1 * x3)]",
+     "train": 0.9996967596603709,
+     "val": 0.9061728395061729,
+     "test": 0.9108512020792723,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x3 > 0.24:\n      if x1 > 0.01:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x1 > 0.00:\n        y = 1.\n      else:\n        y = 0.\n  else:\n    if x3 > 0.24:\n      if x3 > 0.86:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.38:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x9 > 0.08:\n    if x1 > 0.88:\n      if x4 > 0.03:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.03:\n        y = 1.\n      else:\n        y = 0.\n  else:\n    if x7 > 0.41:\n      if x1 > 0.89:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": -0.11958062956315302,
+     "col_max": 1.4452844966376237,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4, x1) * (x3 + x5 - x2) * np.tanh(x8 * np.maximum(x4, x1))]",
+     "train": 0.9997400797088892,
+     "val": 0.9053931124106562,
+     "test": 0.9117608836907083,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": -0.4407495455752954,
+     "col_max": 0.9299438814536098,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4, x1) * (x3 + x5 - x2) * np.tanh(x8) * (1.0 - np.abs(x6 - x7))]",
+     "train": 0.9997400797088892,
+     "val": 0.9073424301494477,
+     "test": 0.9117608836907083,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": -0.4327089615263436,
+     "col_max": 0.683636118376244,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4, x1) * (x3 + x5 - x2) * (x8 + 1.0 - np.abs(x6 - x7) * np.tanh(x4 * x1))]",
+     "train": 0.9997833997574077,
+     "val": 0.9083820662768031,
+     "test": 0.9121507472384666,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": -1.2847307832196868,
+     "col_max": 2.4511796065099745,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4, x1) * (x3 + x5 - x2) * np.sin(x8 * np.pi) * (1.0 - np.abs(x6 - x7))]",
+     "train": 0.9997833997574077,
+     "val": 0.9057829759584145,
+     "test": 0.9122807017543859,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": -0.5315530340322835,
+     "col_max": 0.8872839449719169,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4, x1) * (x3 + x5 - x2) * (x8 + np.sin(x6 * x7))]",
+     "train": 0.9997400797088892,
+     "val": 0.9076023391812865,
+     "test": 0.9134502923976608,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": -0.603979837511634,
+     "col_max": 1.1794014900087892,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4, x1) * (x3 + x5 - x2) * np.cos(np.pi * np.abs(x6 - x7))]",
+     "train": 0.9998700398544447,
+     "val": 0.9052631578947369,
+     "test": 0.9112410656270306,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": -1.1304500175531955,
+     "col_max": 0.9849265333261363,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [x4 * x1 * (x3 + x5 - x2) * np.tanh(x8 + 1.0 - np.abs(x6 - x7))]",
+     "train": 0.9998700398544447,
+     "val": 0.9063027940220922,
+     "test": 0.9121507472384666,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x3 > 0.24:\n      if x1 > 0.01:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x1 > 0.00:\n        y = 1.\n      else:\n        y = 0.\n  else:\n    if x3 > 0.24:\n      if x3 > 0.86:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.38:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x9 > 0.12:\n    if x1 > 0.88:\n      if x4 > 0.04:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x6 > 0.00:\n        y = 1.\n      else:\n        y = 0.\n  else:\n    if x5 > 0.29:\n      if x1 > 0.47:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": -0.10190162215891199,
+     "col_max": 0.7473188489759383,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4, x1) * (x3 + x5 - x2) * np.cos(np.pi * np.abs(x6 - x7) * (x8 + 1.0))]",
+     "train": 0.9997400797088892,
+     "val": 0.9076023391812865,
+     "test": 0.9117608836907083,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": -1.3196043261749673,
+     "col_max": 0.8611193978760727,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4, x1) * (x3 + x5 - x2) * np.tanh(x8 + x6 - x7 + 1.0)]",
+     "train": 0.9996967596603709,
+     "val": 0.9078622482131254,
+     "test": 0.9118908382066276,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": -0.6438455853519851,
+     "col_max": 1.2194088534758236,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4, x1) * np.tanh(x3 + x5 - x2 + x8) * (1.0 - np.abs(x6 - x7))]",
+     "train": 0.9997833997574077,
+     "val": 0.9079922027290448,
+     "test": 0.9121507472384666,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": -0.26373307320074074,
+     "col_max": 0.7565801226759828,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4, x1) * (1.0 - np.abs(x6 - x7)) * np.maximum(x3, x5) * (x8 + np.tanh(x2))]",
+     "train": 0.9998267198059262,
+     "val": 0.9072124756335282,
+     "test": 0.9107212475633528,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": 0.0006979435867157791,
+     "col_max": 1.1126372605811192,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4, x1) * (1.0 - np.abs(x6 - x7)) * np.maximum(x3, x5) * np.tanh(x8 + 1.0)]",
+     "train": 0.9995667995148154,
+     "val": 0.904093567251462,
+     "test": 0.9089018843404808,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x9 > 0.02:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x1 > 0.00:\n        y = 1.\n      else:\n        y = 0.\n  else:\n    if x3 > 0.24:\n      if x3 > 0.86:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.38:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x9 > 0.13:\n    if x5 > 0.25:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.03:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x7 > 0.41:\n      if x4 > 0.04:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 0.0014442771153625267,
+     "col_max": 0.6690549506252752,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4, x1) * (1.0 - np.abs(x6 - x7)) * np.tanh(x3 + x5 - x2 + x8) * (x4 * x4 + 1.0 - np.abs(x6 - x7))]",
+     "train": 0.9997400797088892,
+     "val": 0.9081221572449643,
+     "test": 0.9111111111111111,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": -0.17880250026445152,
+     "col_max": 0.7119431909325743,
+     "source": "proposed"
+    }
+   ],
+   "done": true,
+   "best_rule": "x9 = [x4 * x1]",
+   "accepted": true
+  },
+  {
+   "target": 10,
+   "trajectory": [
+    {
+     "rule": "x10 = [x4 * x1]",
+     "train": 0.9998700398544447,
+     "val": 0.9109811565951916,
+     "test": 0.9165692007797271,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 0.8566100261039999,
+     "source": "initial"
+    },
+    {
+     "rule": "x10 = [np.maximum(x4, x1) * (x2 + x3)]",
+     "train": 0.999913359902963,
+     "val": 0.9107212475633528,
+     "test": 0.9157894736842105,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 1.969705959289,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.maximum(x4, x5) * np.abs(x1 - x2) + np.minimum(x3, x6)]",
+     "train": 0.999913359902963,
+     "val": 0.9128005198180636,
+     "test": 0.9191682910981157,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": 0.00018515816321422495,
+     "col_max": 0.7576306826904889,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.maximum(x4, x5) * (x1 + x2 + x3 + x6 + x7 + x8 + x9)]",
+     "train": 0.9999566799514815,
+     "val": 0.9089018843404808,
+     "test": 0.9130604288499026,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": 0.03964908261162621,
+     "col_max": 4.2453968853841895,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.maximum(x4, np.tanh(x1 * x2 + x3)) * np.exp(-np.abs(x4 - 0.07))]",
+     "train": 0.999913359902963,
+     "val": 0.9085120207927225,
+     "test": 0.9146198830409357,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": 0.014063760785118335,
+     "col_max": 0.9555565763076285,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.maximum(x4, np.tanh(x1 * x2)) * (x3 + x5 + x6 + x7 + x8 + x9) + np.sin(x4 * np.cos(x1))]",
+     "train": 0.9998700398544447,
+     "val": 0.9144899285250162,
+     "test": 0.9189083820662768,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 4.122962931672717,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.maximum(x4, np.tanh(x1 * x2)) * (x3 + x5 + x6 + x7 + x8 + x9) + np.sin(x4 * np.cos(x1)) + np.arctan(x4 - x1)]",
+     "train": 0.999913359902963,
+     "val": 0.9169590643274854,
+     "test": 0.9226770630279402,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": -0.7143169893880189,
+     "col_max": 4.33959705683303,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.maximum(x4, np.tanh(x1 * x2)) * (x3 + x5 + x6 + x7 + x8 + x9) + np.sin(x4 * np.cos(x1)) + np.tanh(x4 - x1) * np.exp(-np.abs(x4 - 0.07))]",
+     "train": 0.9998700398544447,
+     "val": 0.917478882391163,
+     "test": 0.92046783625731,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": -0.6633139623230557,
+     "col_max": 4.166714128186964,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.07, x4 * (x1 + x2 + x3 + x5 + x6 + x7 + x8 + x9), np.minimum(x4, x1) * np.sin(x2 * x3))]",
+     "train": 0.999913359902963,
+     "val": 0.91137102014295,
+     "test": 0.9164392462638077,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 5.043973258309972,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.maximum(x4, np.tanh(x1 * x2)) * (x3 + x5 + x6 + x7 + x8 + x9) + np.sin(x4 * np.cos(x1)) + np.tanh(x4 - x1) * np.exp(-np.abs(x4 - 0.07)) + np.arctan(np.maximum(x4, x3) - np.minimum(x1, x2))]",
+     "train": 0.999913359902963,
+     "val": 0.908641975308642,
+     "test": 0.9141000649772579,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": -0.6656093435221673,
+     "col_max": 4.805783484076378,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.07, x4 * (x1 + x2 + x3 + x5 + x6 + x7 + x8 + x9) + np.sin(x4) * np.cos(x1), np.maximum(x4, x5) * np.tanh(x1 * x2) + np.sin(x3))]",
+     "train": 0.9998700398544447,
+     "val": 0.9078622482131254,
+     "test": 0.9139701104613386,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 5.578567484398324,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.07, x4 * (x1 + x2 + x3 + x5 + x6 + x7 + x8 + x9) + np.sin(x4 * np.cos(x1)), np.maximum(x4, x5) * np.abs(x1 - x2) + np.minimum(x3, x6) + np.tanh(x4 * (x1 + x2 + x3 + x5 + x6 + x7 + x8 + x9)))]",
+     "train": 0.999913359902963,
+     "val": 0.9109811565951916,
+     "test": 0.9161793372319688,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": 0.023451083429280855,
+     "col_max": 5.63411029111005,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.07, np.maximum(x4, x1) * (x3 + x5 + x6 + x7 + x8 + x9) + np.sin(x4 * np.cos(x1)), np.tanh(x2 * x3) * np.exp(-np.abs(x4 - 0.07)))]",
+     "train": 0.999913359902963,
+     "val": 0.9129304743339831,
+     "test": 0.91591942820013,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 4.122962931672717,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.07, x4 * (x1 + x2 + x3 + x5 + x6 + x7 + x8 + x9) + np.sin(x4) * np.cos(x1 * x2), np.tanh(x1 * x2 * x3) * (1.0 - np.abs(x4 - 0.07)))]",
+     "train": 0.999913359902963,
+     "val": 0.9109811565951916,
+     "test": 0.9160493827160494,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 5.73873805882101,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.07, np.maximum(x4, x1) * (x3 + x5 + x6 + x7 + x8 + x9) + np.sin(x4 * np.cos(x1)) + np.tanh(x4 - x1) * np.exp(-np.abs(x4 - 0.07)) + np.sin(x2 * x3) * np.cos(x4 * x5), np.tanh(x1 * x2) * np.exp(-np.abs(x4 - 0.07)) + np.maximum(x3, x4) * np.sin(x1 * x2))]",
+     "train": 0.999913359902963,
+     "val": 0.9129304743339831,
+     "test": 0.9194282001299545,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 4.445696624800349,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.07, x4 * (x1 + x2 + x3 + x5 + x6 + x7 + x8 + x9) + np.sin(np.maximum(x1, x4)) * np.cos(x2 * x3), np.tanh(x1 * x2) * np.exp(-np.abs(x4 - 0.07)) + np.minimum(x3, x4))]",
+     "train": 0.9998700398544447,
+     "val": 0.9166991552956465,
+     "test": 0.9217673814165043,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 5.806113796951831,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.07, np.maximum(x4, x1) * (x3 + x5 + x6 + x7 + x8 + x9) + np.sin(x4 * np.cos(x1)) + np.tanh(x4 * x2) * np.cos(x3), np.tanh(x1 * x2) * np.exp(-np.abs(x4 - 0.07)) + np.sin(x4) * np.cos(x3))]",
+     "train": 0.9998700398544447,
+     "val": 0.9152696556205329,
+     "test": 0.9215074723846653,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 4.591705049083281,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.maximum(x4, np.tanh(x1 * x2)) * (x3 + x5 + x6 + x7 + x8 + x9) + np.sin(x4 * np.cos(x1)) + np.tanh(x4 - x1) * np.exp(-np.abs(x4 - 0.07)) + np.sin(x3 * x5) * np.cos(x2 * x6)]",
+     "train": 0.9999566799514815,
+     "val": 0.9100714749837557,
+     "test": 0.9169590643274854,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": -0.6370965883613076,
+     "col_max": 4.64923708077688,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.07, x4 * (x3 + x5 + x6 + x7 + x8 + x9) + np.sin(x1) * np.cos(x2), np.maximum(x1, x2) * np.tanh(x3))]",
+     "train": 0.9999566799514815,
+     "val": 0.9096816114359974,
+     "test": 0.9137102014294997,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 4.291084792785295,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.07, np.maximum(x4, x1) * (x3 + x5 + x6 + x7 + x8 + x9) + np.sin(x4 * np.cos(x1)) + np.arctan(np.abs(x4 - x1)), np.tanh(x1 * x2) * np.exp(-np.abs(x4 - 0.07)) + np.sin(x3) * np.cos(x2))]",
+     "train": 0.9999566799514815,
+     "val": 0.9096816114359974,
+     "test": 0.9157894736842105,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 4.33959705683303,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.07, (x4 + np.tanh(x1)) * (x3 + x5 + x6 + x7 + x8 + x9) + np.sin(x4 * x2) * np.cos(x1 * x3), np.tanh(x1 * x2) + np.maximum(x3, x4) * np.sin(x1))]",
+     "train": 0.9997833997574077,
+     "val": 0.910461338531514,
+     "test": 0.9147498375568551,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 6.583794014513276,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.07, x4 * (x3 + x5 + x6 + x7 + x8 + x9) + np.sin(x1 * x2) * np.cos(x4), np.tanh(x1 * x2) * np.exp(-np.abs(x4 - 0.07)) + np.maximum(x3, x4))]",
+     "train": 0.9998700398544447,
+     "val": 0.907732293697206,
+     "test": 0.9165692007797271,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": 0.014861,
+     "col_max": 3.838034202307401,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.07, (x4 + np.tanh(x1)) * (x3 + x5 + x6 + x7 + x8 + x9) + np.sin(x4 * x2), np.tanh(x1 * x2) * np.exp(-np.abs(x4 - 0.07)) + np.cos(x3 * x4))]",
+     "train": 0.9998700398544447,
+     "val": 0.9156595191682911,
+     "test": 0.9194282001299545,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": 0.09127995646711569,
+     "col_max": 6.669901301066802,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.07, (x4 + np.tanh(x1 + x2)) * (x3 + x5 + x6 + x7 + x8 + x9) + np.sin(x4) * np.cos(x1 * x2), np.tanh(x1 * x2) * np.exp(-np.abs(x4 - 0.07)) + np.maximum(x3, x4) * np.cos(x1))]",
+     "train": 0.999913359902963,
+     "val": 0.907732293697206,
+     "test": 0.9169590643274854,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": 0.013401345115758011,
+     "col_max": 7.509153320986253,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.07, (x4 + np.tanh(x1 * x2)) * (x3 + x5 + x6 + x7 + x8 + x9) + np.sin(x4) * np.cos(x1), np.tanh(x1 * x2) * np.exp(-np.abs(x4 - 0.07)) + np.maximum(x3, x4) * np.cos(x1 * x2))]",
+     "train": 0.999913359902963,
+     "val": 0.9092917478882391,
+     "test": 0.9170890188434048,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": 0.014861,
+     "col_max": 5.952450822210448,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.07, (x4 + np.tanh(x1 + x2)) * (x3 + x5 + x6 + x7 + x8 + x9) + np.sin(x4 * np.cos(x1)) * np.exp(-np.abs(x4 - 0.07)), np.tanh(x1 * x2) * np.exp(-np.abs(x4 - 0.07)) + np.maximum(x3, x4) * np.cos(x1))]",
+     "train": 0.999913359902963,
+     "val": 0.9090318388564003,
+     "test": 0.9172189733593242,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": 0.013401345115758011,
+     "col_max": 7.051504353556371,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.07, (x4 + np.tanh(x1) + np.sin(x2)) * (x3 + x5 + x6 + x7 + x8 + x9) + np.cos(x4 * x1) * np.exp(-np.abs(x4 - x2)), np.tanh(x1 * x2) * np.exp(-np.abs(x4 - 0.07)) + np.maximum(x3, x4) * np.cos(x1))]",
+     "train": 0.9998700398544447,
+     "val": 0.9082521117608837,
+     "test": 0.9164392462638077,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": 0.013401345115758011,
+     "col_max": 8.764132069287633,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.07, (x4 ** 2 + np.tanh(x1)) * (x3 + x5 + x6 + x7 + x8 + x9) + np.sin(x4) * np.cos(x2), np.tanh(x1 * x2) * np.exp(-np.abs(x4 - 0.07)) + np.sin(x3) * np.cos(x4))]",
+     "train": 0.999913359902963,
+     "val": 0.9100714749837557,
+     "test": 0.9173489278752437,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 6.80489015520205,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.07, (x4 + np.tanh(x1 * x2)) * (x3 + x5 + x6 + x7 + x8 + x9) + np.sin(x4 * np.cos(x1)) + np.arctan(np.maximum(x4, x2)), np.tanh(x1 * x2) * np.exp(-np.abs(x4 - 0.07)) + np.minimum(x3, x4) * np.cos(x1 * x2))]",
+     "train": 0.999913359902963,
+     "val": 0.9164392462638077,
+     "test": 0.9212475633528265,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 6.784211535077253,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.07, (x4 + np.tanh(x1 * x2)) * (x3 + x5 + x6 + x7 + x8 + x9) + np.sin(x4 * np.cos(x1)) + np.maximum(x4, x2) * np.cos(x3 * x5), np.tanh(x1 * x2) * np.exp(-np.abs(x4 - 0.07)) + np.minimum(x3, x4) * np.cos(x1 * x2) + np.sin(x8 * x9))]",
+     "train": 0.999913359902963,
+     "val": 0.9165692007797271,
+     "test": 0.9226770630279402,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 6.868728014768614,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.07, (x4 + np.tanh(x1 * x2)) * (x3 + x5 + x6 + x7 + x8 + x9) + np.sin(x4 * np.cos(x1)) + np.maximum(x4, x2) * np.cos(x3 * x5) + np.tanh(x8 * x9), np.tanh(x1 * x2) * np.exp(-np.abs(x4 - 0.07)) + np.minimum(x3, x4) * np.cos(x1 * x2) + np.sin(x8 * x9) + np.cos(x5 * x6))]",
+     "train": 0.9998700398544447,
+     "val": 0.9181286549707602,
+     "test": 0.9229369720597791,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": 0.22638847826193217,
+     "col_max": 6.999113397061364,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.07, (x4 + np.tanh(x1 * x2)) * (x3 + x5 + x6 + x7 + x8 + x9) + np.sin(x4 * np.cos(x1)) + np.maximum(x4, x2) * np.cos(x3 * x5) + np.tanh(x8 * x9) + np.sin(x1 * x3), np.tanh(x1 * x2) * np.exp(-np.abs(x4 - 0.07)) + np.minimum(x3, x4) * np.cos(x1 * x2) + np.sin(x8 * x9) + np.cos(x5 * x6) + np.tanh(x7))]",
+     "train": 0.999913359902963,
+     "val": 0.9126705653021443,
+     "test": 0.9211176088369071,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": 0.22810732309748433,
+     "col_max": 7.511825700354398,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.07, (x4 + np.tanh(x1 * x2)) * (x3 + x5 + x6 + x7 + x8 + x9) + np.sin(x4 * np.cos(x1)) + np.maximum(x4, x2) * np.cos(x3 * x5) + np.tanh(x8 * x9) + np.sin(x1 * x3), np.tanh(x1 * x2) * np.exp(-np.abs(x4 - 0.07)) + np.minimum(x3, x4) * np.cos(x1 * x2) + np.sin(x8 * x9) + np.cos(x5 * x6) + np.tanh(x4 * x7))]",
+     "train": 0.9998700398544447,
+     "val": 0.916829109811566,
+     "test": 0.9231968810916179,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": 0.22810732309748433,
+     "col_max": 7.511825700354398,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.07, (x4 + np.tanh(x1 * x2) + np.sin(x4)) * (x3 + x5 + x6 + x7 + x8 + x9) + np.maximum(x4, x2) * np.cos(x3 * x5) + np.tanh(x8 * x9) + np.cos(x1 * x6), np.tanh(x1 * x2) * np.exp(-np.abs(x4 - 0.07)) + np.minimum(x3, x4) * np.cos(x1 * x2) + np.sin(x8 * x9) + np.cos(x5 * x6) + np.tanh(x4 * x7) + np.sin(x1 * x2))]",
+     "train": 0.999913359902963,
+     "val": 0.9176088369070825,
+     "test": 0.9254061078622482,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": 1.0,
+     "col_max": 10.39942701633345,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.07, (x4 + np.tanh(x1 * x2) + np.sin(x4)) * (x3 + x5 + x6 + x7 + x8 + x9) + np.maximum(x4, x2) * np.cos(x3 * x5) + np.tanh(x8 * x9) + np.cos(x1 * x6) + np.sin(x3 * x4), np.tanh(x1 * x2) * np.exp(-np.abs(x4 - 0.07)) + np.minimum(x3, x4) * np.cos(x1 * x2) + np.sin(x8 * x9) + np.cos(x5 * x6) + np.tanh(x4 * x7) + np.sin(x1 * x2) + np.cos(x3 * x8))]",
+     "train": 0.999913359902963,
+     "val": 0.9144899285250162,
+     "test": 0.9218973359324236,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": 1.2496829794364641,
+     "col_max": 10.968842736130364,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.07, (x4 + np.tanh(x1 * x2) + np.sin(x4)) * (x3 + x5 + x6 + x7 + x8 + x9) + np.maximum(x4, x2) * np.cos(x3 * x5) + np.tanh(x8 * x9) + np.cos(x1 * x6) + np.sin(x4 * x3), np.tanh(x1 * x2) * np.exp(-np.abs(x4 - 0.07)) + np.minimum(x3, x4) * np.cos(x1 * x2) + np.sin(x8 * x9) + np.cos(x5 * x6) + np.tanh(x4 * x7) + np.sin(x1 * x2) + np.cos(x4 * x8))]",
+     "train": 0.999913359902963,
+     "val": 0.916829109811566,
+     "test": 0.9247563352826511,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": 1.2496829794364641,
+     "col_max": 10.968842736130364,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.07, (x4 + np.tanh(x1 * x2) + np.sin(x4)) * (x3 + x5 + x6 + x7 + x8 + x9) + np.maximum(x4, x2) * np.cos(x3 * x5) + np.tanh(x8 * x9) + np.cos(x1 * x6) + np.sin(x4 * x3) + np.exp(-np.abs(x4 - 0.07)), np.tanh(x1 * x2) * np.exp(-np.abs(x4 - 0.07)) + np.minimum(x3, x4) * np.cos(x1 * x2) + np.sin(x8 * x9) + np.cos(x5 * x6) + np.tanh(x4 * x7) + np.sin(x1 * x2) + np.cos(x4 * x8) + np.tanh(x3 + x4))]",
+     "train": 0.9999566799514815,
+     "val": 0.9122807017543859,
+     "test": 0.9191682910981157,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": 2.0241392611880005,
+     "col_max": 11.370640657464145,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.07, (x4 + np.tanh(x1 * x2)) * (x3 + x5 + x6 + x7 + x8 + x9) + np.sin(x4 * np.cos(x1)) + np.tanh(x4 - x1) * np.exp(-np.abs(x4 - 0.07)) + np.cos(x3 * x4), np.tanh(x1 * x2) * np.exp(-np.abs(x4 - 0.07)) + np.minimum(x3, x4) * np.cos(x1 * x2) + np.sin(x8 * x9) + np.cos(x5 * x6) + np.tanh(x4 * x7))]",
+     "train": 0.9998267198059262,
+     "val": 0.9157894736842105,
+     "test": 0.9230669265756986,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": 0.4445971382340119,
+     "col_max": 6.873794542940271,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.07, (x4 + np.tanh(x1 * x2)) * (x3 + x5 + x6 + x7 + x8 + x9) + np.sin(x4 * np.cos(x1)) * np.exp(-np.abs(x4 - 0.07)), np.tanh(x1 * x2) * np.exp(-np.abs(x4 - 0.07)) + np.minimum(x3, x4))]",
+     "train": 0.9998700398544447,
+     "val": 0.9163092917478882,
+     "test": 0.9222871994801819,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 5.6549724292032515,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.07, (x4 + np.tanh(x1 * x2) + np.sin(x4)) * (x3 + x5 + x6 + x7 + x8 + x9) + np.maximum(x4, x2) * np.cos(x3 * x5) + np.tanh(x8 * x9) + np.cos(x1 * x6) + np.sin(x4 * x3) + np.exp(-np.abs(x4 - 0.07)), np.tanh(x1 * x2) * np.exp(-np.abs(x4 - 0.07)) + np.minimum(x3, x4) * np.cos(x1 * x2) + np.sin(x8 * x9) + np.cos(x5 * x6) + np.tanh(x4 * x7) + np.sin(x1 * x2) + np.cos(x4 * x8) + np.maximum(x1, x9))]",
+     "train": 0.9998700398544447,
+     "val": 0.917478882391163,
+     "test": 0.9235867446393762,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": 2.018428738468162,
+     "col_max": 11.370640657464145,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.07, (x4 + np.tanh(x1 * x2) + np.sin(x4)) * (x3 + x5 + x6 + x7 + x8 + x9) + np.maximum(x4, x2) * np.cos(x3 * x5) + np.tanh(x8 * x9) + np.cos(x1 * x6) + np.sin(x4 * x3) + np.exp(-np.abs(x4 - 0.07)) + np.maximum(x4, x7), np.tanh(x1 * x2) * np.exp(-np.abs(x4 - 0.07)) + np.minimum(x3, x4) * np.cos(x1 * x2) + np.sin(x8 * x9) + np.cos(x5 * x6) + np.tanh(x4 * x7) + np.sin(x1 * x2) + np.cos(x4 * x8) + np.maximum(x1, x9) + np.abs(x4 - 0.07))]",
+     "train": 0.999913359902963,
+     "val": 0.91591942820013,
+     "test": 0.9228070175438596,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": 2.0363227286621757,
+     "col_max": 12.352446657464146,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.07, (x4 + np.tanh(x1 * x2)) * (x3 + x5 + x6 + x7 + x8 + x9) + np.sin(x4) * np.cos(x3 * x5) + np.tanh(x8 + x9) + np.cos(x1 * x6), np.tanh(x1 * x2) * np.exp(-np.abs(x4 - 0.07)) + np.minimum(x3, x4) * np.cos(x1 * x2) + np.sin(x8 * x9) + np.cos(x5 * x6) + np.tanh(x4 * x7) + np.sinh(x1 * x2))]",
+     "train": 0.9998267198059262,
+     "val": 0.9152696556205329,
+     "test": 0.9218973359324236,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": 1.0,
+     "col_max": 7.956690666529121,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.07, (x4 + np.tanh(x1 * x2) + np.sin(x4)) * (x3 + x5 + x6 + x7 + x8 + x9) + np.maximum(x4, x2) * np.cos(x3 * x5) + np.tanh(x8 * x9) + np.cos(x1 * x6) + np.sin(x4 * x3) + np.exp(-np.abs(x4 - 0.07)) + np.maximum(x1, x7), np.tanh(x1 * x2) * np.exp(-np.abs(x4 - 0.07)) + np.minimum(x3, x4) * np.cos(x1 * x2) + np.sin(x8 * x9) + np.cos(x5 * x6) + np.tanh(x4 * x7) + np.sin(x1 * x2) + np.cos(x4 * x8) + np.maximum(x1, x9) + np.sin(x4 * x5))]",
+     "train": 0.999913359902963,
+     "val": 0.917478882391163,
+     "test": 0.9200779727095516,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": 2.032630375184957,
+     "col_max": 12.34384335154019,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.07, (x4 + x3 + x5 + x6 + x7 + x8 + x9) * np.exp(np.tanh(x1 * x2)) + np.cos(x4), np.sin(x1 * x2) * np.exp(-np.abs(x4 - 0.07)) + np.minimum(x3, x4))]",
+     "train": 0.9998267198059262,
+     "val": 0.9165692007797271,
+     "test": 0.9212475633528265,
+     "tree": "if x10 > 0.26:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 9.220425468299792,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.07, (x4 + np.tanh(x1 * x2)) * (x3 + x5 + x6 + x7 + x8 + x9) + np.sin(x4) * np.cos(x3 * x5) + np.exp(-np.abs(x4 - 0.07)), np.tanh(x1 * x2) * np.exp(-np.abs(x4 - 0.07)) + np.minimum(x3, x4) * np.cos(x1 * x2) + np.sin(x8 * x9) + np.cos(x5 * x6) + np.tanh(x4 * x7))]",
+     "train": 0.999913359902963,
+     "val": 0.9164392462638077,
+     "test": 0.9221572449642625,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": 1.0,
+     "col_max": 6.548619671279764,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.07, (x4 + np.tanh(x1 * x2)) * (x3 + x5 + x6 + x7 + x8 + x9) + np.sin(x4 * np.cos(x1)) + np.maximum(x4, x2) * np.cos(x3 * x5) + np.tanh(x8 * x9) + np.cos(x1 * x6) * np.sin(x4 * x3), np.tanh(x1 * x2) * np.exp(-np.abs(x4 - 0.07)) + np.minimum(x3, x4) * np.cos(x1 * x2) + np.sin(x8 * x9) + np.cos(x5 * x6) + np.tanh(x4 * x7) + np.sin(x1 * x2) * np.cos(x4 * x8))]",
+     "train": 0.9998700398544447,
+     "val": 0.9166991552956465,
+     "test": 0.9244964262508122,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": 0.23505918658850392,
+     "col_max": 7.567653712779882,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.07, (x4 + np.tanh(x1 * x2) + np.sin(x4)) * (x3 + x5 + x6 + x7 + x8 + x9) + np.maximum(x4, x2) * np.cos(x3 * x5) + np.tanh(x8 * x9) + np.cos(x1 * x6) + np.sin(x4 * x3) + np.exp(-np.abs(x4 - 0.07)) + np.maximum(x1, x7) + np.cos(x2 * x3), np.tanh(x1 * x2) * np.exp(-np.abs(x4 - 0.07)) + np.minimum(x3, x4) * np.cos(x1 * x2) + np.sin(x8 * x9) + np.cos(x5 * x6) + np.tanh(x4 * x7) + np.sin(x1 * x2) + np.cos(x4 * x8) + np.maximum(x1, x9) + np.sin(x4 * x5) + np.cos(x2 * x7))]",
+     "train": 0.999913359902963,
+     "val": 0.9172189733593242,
+     "test": 0.9220272904483431,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": 2.9519086304706663,
+     "col_max": 13.260426282456862,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.07, (x4 + np.tanh(x1 * x2) + np.sin(x4)) * (x3 + x5 + x6 + x7 + x8 + x9) + np.maximum(x4, x2) * np.cos(x3 * x5) + np.tanh(x8 * x9) + np.cos(x1 * x6) + np.sin(x4 * x3), np.tanh(x1 * x2) * np.exp(-np.abs(x4 - 0.07)) + np.minimum(x3, x4) * np.cos(x1 * x2) + np.sin(x8 * x9) + np.cos(x5 * x6) + np.tanh(x4 * x7))]",
+     "train": 0.999913359902963,
+     "val": 0.9165692007797271,
+     "test": 0.9234567901234568,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": 1.0,
+     "col_max": 10.968842736130364,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.07, np.maximum(x4, x1) * (x3 + x5 + x6 + x7 + x8 + x9) + np.sin(x2 * x3) * np.cos(x4), np.minimum(x3, x4) * np.exp(-x1) + np.tanh(x8 * x9) + np.cos(x5 * x6))]",
+     "train": 0.999913359902963,
+     "val": 0.9094217024041585,
+     "test": 0.9143599740090969,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": 0.08195823347061577,
+     "col_max": 3.780607727869788,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.07, np.tanh(x4 * (x3 + x5 + x6 + x7 + x8 + x9)) + np.cos(x1 * x2) * np.exp(-np.abs(x4 - 0.07)), np.sin(x1 * x2) * np.tanh(x3 * x4) + np.cos(x5 * x6) + np.sin(x7 * x8))]",
+     "train": 0.999913359902963,
+     "val": 0.9105912930474334,
+     "test": 0.9143599740090969,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": 0.6765523181302702,
+     "col_max": 1.6052974988977233,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.07, (x4 + np.tanh(x1 * x2)) * (x3 + x5 + x6 + x7 + x8 + x9) + np.sin(x4 * np.cos(x1)) * np.exp(-np.abs(x4 - 0.07)) + np.maximum(x4, x2) * np.cos(x3 * x5) * np.tanh(x8 * x9), np.tanh(x1 * x2) * np.exp(-np.abs(x4 - 0.07)) + np.minimum(x3, x4) * np.cos(x1 * x2) + np.sin(x8 * x9) * np.cos(x5 * x6))]",
+     "train": 0.9998700398544447,
+     "val": 0.9165692007797271,
+     "test": 0.9226770630279402,
+     "tree": "if x4 > 0.07:\n  y = 1.\nelse:\n  y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 5.767199611154354,
+     "source": "proposed"
+    }
+   ],
+   "done": true,
+   "best_rule": "x10 = [np.where(x4 > 0.07, (x4 + np.tanh(x1 * x2)) * (x3 + x5 + x6 + x7 + x8 + x9) + np.sin(x4 * np.cos(x1)) + np.maximum(x4, x2) * np.cos(x3 * x5) + np.tanh(x8 * x9), np.tanh(x1 * x2) * np.exp(-np.abs(x4 - 0.07)) + np.minimum(x3, x4) * np.cos(x1 * x2) + np.sin(x8 * x9) + np.cos(x5 * x6))]",
+   "accepted": true
+  }
+ ],
+ "accepted": [
+  {
+   "rule": "x9 = [x4 * x1]",
+   "train": 0.9995667995148154,
+   "val": 0.9094217024041585,
+   "test": 0.9138401559454191,
+   "col_min": 0.0,
+   "col_max": 0.8566100261039999
+  },
+  {
+   "rule": "x10 = [np.where(x4 > 0.07, (x4 + np.tanh(x1 * x2)) * (x3 + x5 + x6 + x7 + x8 + x9) + np.sin(x4 * np.cos(x1)) + np.maximum(x4, x2) * np.cos(x3 * x5) + np.tanh(x8 * x9), np.tanh(x1 * x2) * np.exp(-np.abs(x4 - 0.07)) + np.minimum(x3, x4) * np.cos(x1 * x2) + np.sin(x8 * x9) + np.cos(x5 * x6))]",
+   "train": 0.9998700398544447,
+   "val": 0.9181286549707602,
+   "test": 0.9229369720597791,
+   "col_min": 0.22638847826193217,
+   "col_max": 6.999113397061364
+  }
+ ],
+ "finished": true,
+ "timing": {
+  "llm": 235.4474287033081,
+  "xgboost": 2462.858135700226,
+  "cart": 25.787205457687378,
+  "rule": 30.632209539413452
+ },
+ "llm_calls": 111,
+ "invalid_answers": 11,
+ "prompt_tokens": 149807,
+ "completion_tokens": 10307,
+ "final": {
+  "val": 0.9181286549707602,
+  "test": 0.9229369720597791,
+  "test_error": 7.706302794022091,
+  "baseline_error": 8.732943469785571,
+  "rules": [
+   "x9 = [x4 * x1]",
+   "x10 = [np.where(x4 > 0.07, (x4 + np.tanh(x1 * x2)) * (x3 + x5 + x6 + x7 + x8 + x9) + np.sin(x4 * np.cos(x1)) + np.maximum(x4, x2) * np.cos(x3 * x5) + np.tanh(x8 * x9), np.tanh(x1 * x2) * np.exp(-np.abs(x4 - 0.07)) + np.minimum(x3, x4) * np.cos(x1 * x2) + np.sin(x8 * x9) + np.cos(x5 * x6))]"
+  ]
+ }
+}

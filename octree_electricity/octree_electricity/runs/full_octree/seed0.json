@@ -1,0 +1,1093 @@
+{
+ "config": {
+  "seed": 0,
+  "n_iters": 50,
+  "max_features": 2,
+  "use_tree": true,
+  "cart_max_depth": 4,
+  "n_estimators": null,
+  "proposer": "gemini:gemini-3.5-flash-lite"
+ },
+ "baseline": {
+  "train": 1.0,
+  "val": 0.9134502923976608,
+  "test": 0.91591942820013
+ },
+ "rounds": [
+  {
+   "target": 9,
+   "trajectory": [
+    {
+     "rule": "x9 = [x4 * x1]",
+     "train": 1.0,
+     "val": 0.9143599740090969,
+     "test": 0.9164392462638077,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x9 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 0.8566100261039999,
+     "source": "initial"
+    },
+    {
+     "rule": "x9 = [np.where(x8 > x2, x3 * x6, x7 * x5)]",
+     "train": 1.0,
+     "val": 0.9108512020792723,
+     "test": 0.9164392462638077,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 0.8378583393912576,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.clip(x4 * x3 + x1 * x6 - x2, 0, 1)]",
+     "train": 1.0,
+     "val": 0.9122807017543859,
+     "test": 0.9133203378817414,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 0.5386396241870919,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.where(x4 > x8, x1 * x3, x5 * x6)]",
+     "train": 1.0,
+     "val": 0.9070825211176088,
+     "test": 0.9122807017543859,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 0.734697806514,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.where(x4 > 0.07, x1 * x3 + x6, x5 * x7)]",
+     "train": 1.0,
+     "val": 0.9085120207927225,
+     "test": 0.9105912930474334,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x9 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 1.27988219249,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.where(x4 > 0.07, x3 * x1 + x6 * x8, x5 * x2 + x7)]",
+     "train": 1.0,
+     "val": 0.9133203378817414,
+     "test": 0.9129304743339831,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x9 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0015053481143201665,
+     "col_max": 1.4450465371471293,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.where(x4 > x8, x1 * x3 + x6 * x2, x5 * x7 + x4 * x8)]",
+     "train": 1.0,
+     "val": 0.9070825211176088,
+     "test": 0.9096816114359974,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.010715396301413061,
+     "col_max": 0.9504266475493812,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.where(x4 > 0.07, x1 * x3 + x4 * x8, x5 * x7 + x2 * x6)]",
+     "train": 1.0,
+     "val": 0.908641975308642,
+     "test": 0.9089018843404808,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x9 > 0.03:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0007507229255019828,
+     "col_max": 1.2207673100262681,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.where(x4 > 0.07, x1 * x3 * x8 + x6 * (1 - x2), x5 * x7 * (1 - x4))]",
+     "train": 1.0,
+     "val": 0.9083820662768031,
+     "test": 0.9108512020792723,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x9 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 0.7712257282015479,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.where(x4 > 0.07, x3 * x1 * x8 + x6 * (1 - x2) + np.sin(x5 * x7), x5 * x7 * (1 - x4) + np.cos(x1 * x2))]",
+     "train": 1.0,
+     "val": 0.909551656920078,
+     "test": 0.9118908382066276,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x9 > 0.05:\n      if x1 > 0.01:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x1 > 0.00:\n        y = 1.\n      else:\n        y = 0.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.02:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x3 > 0.31:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 0.020137403796693265,
+     "col_max": 1.6418861845701636,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.where(x4 > 0.07, x3 * x1 * x4 + x6 * (1 - x2) + np.sin(x5 * x7), x5 * x7 * (1 - x4) + np.cos(x1 * x8))]",
+     "train": 1.0,
+     "val": 0.9096816114359974,
+     "test": 0.9090318388564003,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.01794980502595399,
+     "col_max": 1.6484151036420696,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.where(x4 > 0.07, x1 * x3 * x4 + np.sin(x6 * x8) * (1 - x2), np.cos(x5 * x7) + x1 * x2 * (1 - x4))]",
+     "train": 1.0,
+     "val": 0.9176088369070825,
+     "test": 0.9164392462638077,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 1.967663111276671,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.where(x4 > 0.07, x1 * x3 * x4 + np.tanh(x6 * x8) * (1 - x2), np.cos(x5 * x7) * x1 + np.sin(x2 * x4))]",
+     "train": 1.0,
+     "val": 0.9165692007797271,
+     "test": 0.9134502923976608,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 1.0394958073220049,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.where(x4 > 0.07, x1 * x3 * x4 + np.tanh(x6 * x8) * (1 - x2) + np.sin(x5 * x7), np.cos(x5 * x7) * x1 + np.sin(x2 * x4) * (1 - x4))]",
+     "train": 1.0,
+     "val": 0.91591942820013,
+     "test": 0.91137102014295,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0002619475592649563,
+     "col_max": 1.2934271071341228,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.where(x4 > 0.07, x1 * x3 + np.maximum(x6 * x8, x5 * x7), np.minimum(x1 + x2, x5 * x4))]",
+     "train": 1.0,
+     "val": 0.9100714749837557,
+     "test": 0.9111111111111111,
+     "tree": "if x9 > 0.02:\n  if x4 > 0.08:\n    if x9 > 0.07:\n      if x1 > 0.01:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x1 > 0.00:\n        y = 1.\n      else:\n        y = 0.\n  else:\n    if x1 > 0.43:\n      if x1 > 0.89:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.07:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x3 > 0.24:\n        y = 1.\n      else:\n        y = 0.\n    else:\n      if x3 > 0.31:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 1.4989754393800632,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.where(x4 > 0.07, x1 * x3 + np.maximum(x6 * x8, x2), np.minimum(x5 * x7, x1) + np.abs(x4 - x2))]",
+     "train": 1.0,
+     "val": 0.9173489278752437,
+     "test": 0.9173489278752437,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0015241782593201664,
+     "col_max": 1.9954429999999999,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.where(x4 > 0.07, x1 * x3 * np.power(x4, 2) + np.sin(x6 * x8) * (1 - x2), np.cos(x5 * x7) * x1 + np.power(x2 * x4, 2))]",
+     "train": 1.0,
+     "val": 0.9130604288499026,
+     "test": 0.9157894736842105,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 0.9993052649561441,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.where(x4 > 0.07, x1 * x3 * x4 + np.tanh(x6 * x8) * (1.0 - x2) + np.sin(x5 * x7) * np.cos(x1 * x4), np.cos(x5 * x7) * x1 + np.sin(x2 * x4) * (1.0 - x4) + np.abs(x3 - x6))]",
+     "train": 1.0,
+     "val": 0.9116309291747888,
+     "test": 0.9121507472384666,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.004050016869663733,
+     "col_max": 1.9798467973552358,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.where(x4 > 0.07, x1 * x3 * x4 + np.tanh(x6 * x8) * (1 - x2) + np.sin(x5 * x7) * np.exp(-x4), np.cos(x5 * x7) * x1 + np.sin(x2 * x4) * (1 - x4) + np.abs(x1 - x3))]",
+     "train": 1.0,
+     "val": 0.909551656920078,
+     "test": 0.9105912930474334,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0011448898304719014,
+     "col_max": 1.9672651051179115,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.where(x4 > 0.07, x1 * x3 * x4 + np.tanh(x6 * x8) * (1 - x2) + np.sin(x5 * x7) * np.exp(-x4), np.cos(x5 * x7) * x1 + np.sin(x2 * x4) * (1 - x4) + np.power(x1 * x8, 3))]",
+     "train": 1.0,
+     "val": 0.9129304743339831,
+     "test": 0.9130604288499026,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0002619475607710887,
+     "col_max": 1.792854400427904,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.where(x4 > 0.07, x1 * x3 * x4 + np.tanh(x6 * x8) * (1 - x2) + np.sin(x5 * x7) * np.exp(-x4), np.cos(x5 * x7) * x1 + np.sin(x2 * x4) * np.abs(x1 - x3))]",
+     "train": 1.0,
+     "val": 0.9117608836907083,
+     "test": 0.9124106562703054,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 1.0206175584157458,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.where(x4 > 0.07, x1 * x3 * x4 + np.tanh(x6 * x8) * (1 - x2) + np.sin(x5 * x7) * np.exp(-x4), np.cos(x5 * x7) * x1 + np.sin(x2 * x4) * np.cos(x1))]",
+     "train": 1.0,
+     "val": 0.9122807017543859,
+     "test": 0.9131903833658219,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0002619475592649563,
+     "col_max": 1.014223775247705,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.where(x4 > 0.07, x1 * x3 * x4 + np.tanh(x6 * x8) * (1 - x2) + np.sin(x5 * x7) * np.abs(x1 - x2), np.cos(x5 * x7) * x1 + np.sin(x2 * x4) * (1 - x4) + x3 * x8)]",
+     "train": 1.0,
+     "val": 0.9103313840155945,
+     "test": 0.9146198830409357,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0005698898304719014,
+     "col_max": 1.8142346188771556,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.where(x4 > 0.07, x1 * x3 * x4 + np.tanh(x6 * x8) * np.abs(1.0 - x2), np.cos(x5 * x7) * x1 + np.sin(x2 * x4) * (1.0 - x4))]",
+     "train": 1.0,
+     "val": 0.916829109811566,
+     "test": 0.9128005198180636,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 1.0352386586232751,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.where(x4 > 0.07, x1 * x3 * x4 + np.tanh(x6 * x8) * (np.maximum(x2, x5) - x7), np.cos(x5 * x7) * x1 + np.sin(x2 * x4) * np.abs(x1 - x6))]",
+     "train": 1.0,
+     "val": 0.9134502923976608,
+     "test": 0.9137102014294997,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x9 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": -0.00037735768059458935,
+     "col_max": 1.038917910520464,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.where(x4 > 0.07, x1 * x3 * x4 + np.tanh(x6 * x8) * (np.maximum(x2, x5) - np.sin(x7)), np.cos(x5 * x7) * x1 + np.cos(x2 * x4) * np.abs(x1 - x6))]",
+     "train": 1.0,
+     "val": 0.9141000649772579,
+     "test": 0.9144899285250162,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x9 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": -0.00036078292207932834,
+     "col_max": 1.9969206532271229,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.where(x4 > 0.07, x1 * x3 * x4 + np.tanh(x6 * x8) * (1.0 - x2) + np.sin(x5 * x7) * x4, np.cos(x5 * x7) * x1 + np.sin(x2 * x4) * (1.0 - x4) + np.abs(x1 - x8))]",
+     "train": 1.0,
+     "val": 0.9134502923976608,
+     "test": 0.9151397011046134,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x9 > 0.00:\n      if x1 > 0.01:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x1 > 0.00:\n        y = 1.\n      else:\n        y = 0.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.02:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x3 > 0.31:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 0.0023117187175323312,
+     "col_max": 1.7057334894833671,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.where(x4 > 0.07, x1 * x3 * x4 + np.tanh(x6 * x8) * (1.0 - x2) + np.sin(x5 * x7) * x4, np.cos(x5 * x7) * x1 + np.sin(x2 * x4) * (1.0 - x4) + np.cos(x3 * x6))]",
+     "train": 1.0,
+     "val": 0.9163092917478882,
+     "test": 0.9141000649772579,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x9 > 0.00:\n      if x1 > 0.01:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x1 > 0.00:\n        y = 1.\n      else:\n        y = 0.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.02:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x3 > 0.31:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 0.0023117187175323312,
+     "col_max": 2.0352338133202323,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.where(x4 > 0.07, x1 * x3 * np.power(x4, 2) + np.tanh(x6 * x8) * (1.0 - x2) + np.sin(x5 * x7) * x4, np.cos(x5 * x7) * x1 + np.sin(x2 * x4) * (1.0 - x4) + np.cos(x3 * x6) * (1.0 - x1))]",
+     "train": 1.0,
+     "val": 0.9135802469135802,
+     "test": 0.9143599740090969,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x9 > 0.01:\n      if x1 > 0.01:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x1 > 0.00:\n        y = 1.\n      else:\n        y = 0.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.02:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x3 > 0.31:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 0.0018011310599849776,
+     "col_max": 1.2699750762144377,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.where(x4 > 0.07, x1 * x3 * x4 + np.tanh(x6 * x8) * (1 - x2) + np.sin(x5 * x7) * x4, np.cos(x5 * x7) * x1 + np.sin(x2 * x4) * (1 - x4) + np.cos(x3 * x6) * (1 - x1))]",
+     "train": 1.0,
+     "val": 0.9142300194931774,
+     "test": 0.9138401559454191,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x9 > 0.01:\n      if x1 > 0.01:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x1 > 0.00:\n        y = 1.\n      else:\n        y = 0.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.02:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x3 > 0.31:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 0.0023117187175323312,
+     "col_max": 1.279923054468886,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.where(x4 > 0.07, x1 * x3 * x4 + np.tanh(x6 * x8) * (1.0 - x2) + np.cos(x5), np.maximum(x1 * x2, np.sin(x4 * x8)))]",
+     "train": 1.0,
+     "val": 0.9169590643274854,
+     "test": 0.919558154645874,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.00:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.11:\n        y = 1.\n      else:\n        y = 0.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.02:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x9 > 0.02:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x3 > 0.31:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 1.3420442927138485,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.where(x4 > 0.07, x1 * x3 * x4 + np.tanh(x6 * x8) * (1.0 - x2) * np.sin(x5), np.cos(x5 * x7) * x1 + np.sin(x2 * x4) * (1.0 - x4) + np.cos(x3 * x6 * x8))]",
+     "train": 1.0,
+     "val": 0.9143599740090969,
+     "test": 0.9139701104613386,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x9 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 2.035236566744721,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.where(x4 > 0.07, x1 * x3 * x4 + np.tanh(x6 * x8) * (1.0 - x2) + np.maximum(x5, x7), np.cos(x1 * x2) * np.sin(x3 * x4) + np.abs(x5 - x6))]",
+     "train": 1.0,
+     "val": 0.9076023391812865,
+     "test": 0.9105912930474334,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.00:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.11:\n        y = 1.\n      else:\n        y = 0.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.02:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x9 > 0.18:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x1 > 0.02:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x5 > 0.19:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 0.007417377127798234,
+     "col_max": 1.5479999997676486,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.where(x4 > 0.07, x1 * x3 * x4 + np.tanh(x6 * x8) * np.abs(1.0 - x2) + np.cos(x1 * x5), np.sin(x2 * x4) * (1.0 - x4) + np.cos(x3 * x7) * x8)]",
+     "train": 1.0,
+     "val": 0.9115009746588694,
+     "test": 0.9139701104613386,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.04088398151030411,
+     "col_max": 1.3608302916588433,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.where(x4 > 0.07, x1 * x3 * x4 + np.tanh(x6 * x8) * np.abs(1.0 - x2) + np.sin(x5 * x7) * x4, np.cos(x5 * x7) * x1 + np.sin(x2 * x4) * (1.0 - x4) + np.cos(x3 * x6) + np.sin(x1 * x8))]",
+     "train": 1.0,
+     "val": 0.9141000649772579,
+     "test": 0.9126705653021443,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x9 > 0.00:\n      if x1 > 0.01:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x1 > 0.00:\n        y = 1.\n      else:\n        y = 0.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.02:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x3 > 0.31:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 0.0023117187175323312,
+     "col_max": 2.82475592561145,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.where(x4 > 0.07, x1 * x3 * x4 + np.tanh(x6 * x8) * np.abs(1.0 - x2) * np.cos(x5), np.maximum(x1 * x2 * x3, np.sin(x4 * x8) * np.cos(x7)))]",
+     "train": 1.0,
+     "val": 0.9128005198180636,
+     "test": 0.9148797920727745,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x9 > 0.00:\n      if x4 > 0.10:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.25:\n        y = 1.\n      else:\n        y = 0.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.02:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x9 > 0.03:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x3 > 0.31:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 0.9158,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.where(x4 > 0.07, x1 * x3 * x4 + np.tanh(x6 * x8) * (1.0 - x2) + np.sin(x5 * x7), np.cos(x5 * x7) * x1 + np.sin(x2 * x4) * (1.0 - x4) + np.cos(x3 * x6) * np.abs(x1 - x2))]",
+     "train": 1.0,
+     "val": 0.9153996101364522,
+     "test": 0.9157894736842105,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0005269474364933803,
+     "col_max": 1.9909546338340154,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.where(x4 > 0.07, x1 * x3 * x4 + np.tanh(x6 * x8) * (1.0 - x2) + np.sin(x5 * x7) * x4 + np.maximum(x1, x3), np.cos(x5 * x7) * x1 + np.sin(x2 * x4) * (1.0 - x4) + np.cos(x3 * x6) * np.abs(x1 - x8))]",
+     "train": 1.0,
+     "val": 0.9116309291747888,
+     "test": 0.910461338531514,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x9 > 0.11:\n      if x4 > 0.10:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x1 > 0.00:\n        y = 1.\n      else:\n        y = 0.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.02:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x3 > 0.31:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 0.013962892961917458,
+     "col_max": 2.152407054468886,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.where(x4 > 0.07, x1 * x3 * x4 + np.tanh(x6 * x8) * (1.0 - x2) + np.sin(x5 * x7), np.cos(x5 * x7) * x1 + np.sin(x2 * x4) * (1.0 - x4) + np.maximum(x3, x8))]",
+     "train": 1.0,
+     "val": 0.9130604288499026,
+     "test": 0.9144899285250162,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.016633284984656094,
+     "col_max": 1.9844240628004954,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.where(x4 > 0.07, x1 * x3 * x4 + np.tanh(x6 * x8) * np.abs(1.0 - x2) * np.sin(x5), np.cos(x5 * x7) * x1 + np.sin(x2 * x4) * (1.0 - x4) + np.maximum(x3, x6))]",
+     "train": 1.0,
+     "val": 0.9133203378817414,
+     "test": 0.9142300194931774,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x9 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 1.9844240628004954,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.where(x4 > 0.07, x1 * x3 * x4 + np.tanh(x6 * x8) * (1.0 - x2) + np.maximum(x5, x7), np.cos(x1 * x2) * x4 + np.sin(x3 * x5))]",
+     "train": 1.0,
+     "val": 0.9103313840155945,
+     "test": 0.9120207927225471,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.00:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.11:\n        y = 1.\n      else:\n        y = 0.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.02:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x9 > 0.06:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x5 > 0.28:\n      if x1 > 0.45:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 0.014861,
+     "col_max": 1.5479999997676486,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.where(x4 > 0.07, x1 * x3 * x4 + np.tanh(x6 * x8) * (1.0 - x2) + np.maximum(x5, x7), np.cos(x5 * x7) * x1 + np.sin(x2 * x4) * (1.0 - x4) + np.maximum(x3, x6))]",
+     "train": 1.0,
+     "val": 0.9129304743339831,
+     "test": 0.9117608836907083,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.004050016869663733,
+     "col_max": 1.9844240628004954,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.where(x4 > 0.07, x1 * x3 * x4 + np.tanh(x6 * x8) * np.abs(1.0 - x2) + np.sin(x5 * x7) * x4, np.cos(x5 * x7) * x1 + np.sin(x2 * x4) * (1.0 - x4) + np.cos(x3 * x6) + np.maximum(x1 * x5, x8 * (1.0 - x4)))]",
+     "train": 1.0,
+     "val": 0.9151397011046134,
+     "test": 0.9148797920727745,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x9 > 0.00:\n      if x1 > 0.01:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x1 > 0.00:\n        y = 1.\n      else:\n        y = 0.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.02:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x3 > 0.31:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 0.0023117187175323312,
+     "col_max": 2.9059117806662003,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.where(x4 > 0.07, x1 * x3 * x4 + np.tanh(x6 * x8) * (1.0 - x2) + np.maximum(x1 * x5, x3 * x6), np.cos(x5 * x7) * x1 + np.sin(x2 * x4) * (1.0 - x4) + np.maximum(x1, x2 * x3))]",
+     "train": 1.0,
+     "val": 0.9152696556205329,
+     "test": 0.9121507472384666,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x9 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0002266266049849346,
+     "col_max": 2.030681658623275,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.where(x4 > 0.07, x1 * x3 * x4 + np.tanh(x6 * x8) * (1.0 - x2) + np.maximum(x1 * x5, x3 * x7), np.cos(x5 * x7) * x1 + np.sin(x2 * x4) * (1.0 - x4) + np.maximum(x6, x8))]",
+     "train": 1.0,
+     "val": 0.9141000649772579,
+     "test": 0.9137102014294997,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x9 > 0.04:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0003028266757340114,
+     "col_max": 1.9502593817928264,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.where(x4 > 0.07, x1 * x3 * x4 + np.tanh(x6 * x8) * np.abs(1.0 - x2) + np.sin(x5 * x7) * x4, np.cos(x5 * x7) * x1 + np.sin(x2 * x4) * (1.0 - x4) + np.cos(x3 * x6) + np.sin(x8 * x1))]",
+     "train": 1.0,
+     "val": 0.9141000649772579,
+     "test": 0.9126705653021443,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x9 > 0.00:\n      if x1 > 0.01:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x1 > 0.00:\n        y = 1.\n      else:\n        y = 0.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.02:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x3 > 0.31:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 0.0023117187175323312,
+     "col_max": 2.82475592561145,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.where(x4 > 0.07, x1 * x3 * x4 + np.tanh(x6 * x8) * (1.0 - x2) * x5 + np.exp(-x4), np.cos(x5 * x7) * x1 + np.sin(x2 * x4) * (1.0 - x4) + np.maximum(x3, x6))]",
+     "train": 1.0,
+     "val": 0.91137102014295,
+     "test": 0.9139701104613386,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.004050016869663733,
+     "col_max": 1.9844240628004954,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.where(x4 > 0.07, x1 * x3 * x4 + np.tanh(x6 * x8) * (1.0 - x2) * x5 + np.sin(x1 * x7), np.cos(x5 * x7) * x1 + np.sin(x2 * x4) * (1.0 - x4) * x6)]",
+     "train": 1.0,
+     "val": 0.9138401559454191,
+     "test": 0.9139701104613386,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x9 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 2.2651749478112202e-05,
+     "col_max": 1.3146182261752422,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.where(x4 > 0.07, x1 * x3 * x4 + np.tanh(x6 * x8) * (1.0 - x2) * x1 + np.sin(x5 * x7) * x4, np.cos(x5 * x7) * x1 + np.sin(x2 * x4) * (1.0 - x4) + np.cos(x3 * x6) * (1.0 - x5))]",
+     "train": 1.0,
+     "val": 0.9098115659519168,
+     "test": 0.9112410656270306,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x9 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0015835854059670462,
+     "col_max": 1.862814588405547,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.where(x4 > 0.07, x1 * x3 * x4 + np.tanh(x6 * x8) * (1.0 - x2) * x1 + np.sin(x5 * x7) * np.cos(x4), np.cos(x5 * x7) * x1 + np.sin(x2 * x4) * (1.0 - x4) + np.maximum(x3, x6))]",
+     "train": 1.0,
+     "val": 0.9109811565951916,
+     "test": 0.9134502923976608,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.004050016869663733,
+     "col_max": 1.9844240628004954,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.where(x4 > 0.07, x1 * x3 * x4 + np.tanh(x6 * x8) * (1.0 - x2) + np.sin(x5 * x7) * x4 + x1 * x6 * (1.0 - x4), np.cos(x5 * x7) * x1 + np.sin(x2 * x4) * (1.0 - x4) + np.cos(x3 * x6) * (1.0 - x5))]",
+     "train": 1.0,
+     "val": 0.9099415204678363,
+     "test": 0.91137102014295,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x9 > 0.00:\n      if x1 > 0.01:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x1 > 0.00:\n        y = 1.\n      else:\n        y = 0.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.02:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x3 > 0.31:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 0.002413922700788847,
+     "col_max": 1.862814588405547,
+     "source": "proposed"
+    }
+   ],
+   "done": true,
+   "best_rule": "x9 = [np.where(x4 > 0.07, x1 * x3 * x4 + np.sin(x6 * x8) * (1 - x2), np.cos(x5 * x7) + x1 * x2 * (1 - x4))]",
+   "accepted": true
+  },
+  {
+   "target": 10,
+   "trajectory": [
+    {
+     "rule": "x10 = [x4 * x1]",
+     "train": 1.0,
+     "val": 0.9202079272254711,
+     "test": 0.9198180636777128,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x10 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 0.8566100261039999,
+     "source": "initial"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.08, x3 * x9, x1 * x5)]",
+     "train": 1.0,
+     "val": 0.9160493827160494,
+     "test": 0.9163092917478882,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.00:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.11:\n        y = 1.\n      else:\n        y = 0.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.02:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x10 > 0.25:\n    if x1 > 0.88:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.04:\n        y = 1.\n      else:\n        y = 0.\n  else:\n    if x10 > 0.15:\n      if x5 > 0.23:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 0.8060508352798558,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.08, x3 * x9 + x1 * x5, np.maximum(x1 * x4, x3 * x5))]",
+     "train": 1.0,
+     "val": 0.9151397011046134,
+     "test": 0.91591942820013,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x10 > 0.00:\n      if x4 > 0.10:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.44:\n        y = 1.\n      else:\n        y = 0.\n  else:\n    if x10 > 0.05:\n      if x1 > 0.02:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.44:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x10 > 0.08:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x5 > 0.29:\n      if x1 > 0.45:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 1.043849341595258,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.08, x3 * x9 - x1 * x5, x4 * x1 + x3 * x9)]",
+     "train": 1.0,
+     "val": 0.9182586094866797,
+     "test": 0.9173489278752437,
+     "tree": "if x4 > 0.07:\n  if x10 > 0.45:\n    if x3 > 0.24:\n      if x3 > 0.86:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.10:\n      if x1 > 0.00:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x10 > 0.16:\n        y = 1.\n      else:\n        y = 1.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x3 > 0.31:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": -0.8254626887262071,
+     "col_max": 0.9939876238095054,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.08, x3 * x9 * (1.0 - x1 * x5), x1 * x4 + x3 * x5 * x2)]",
+     "train": 1.0,
+     "val": 0.916829109811566,
+     "test": 0.9190383365821962,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 0.6186491984155813,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.08, x3 * x9 * (1.0 - x1 * x5) + x4 * x2, x1 * x4 * x6 + x3 * x5 * x7)]",
+     "train": 1.0,
+     "val": 0.9164392462638077,
+     "test": 0.9138401559454191,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 0.8770972416144023,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.08, x3 * x9 * np.clip(1.0 - x1 * x5, 0.0, 1.0) + np.maximum(x2 * x6, x7 * x8), x1 * x4 * np.maximum(x3, x5) + np.minimum(x2, x6))]",
+     "train": 1.0,
+     "val": 0.91591942820013,
+     "test": 0.9165692007797271,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.00:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.11:\n        y = 1.\n      else:\n        y = 0.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.02:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x10 > 0.02:\n    if x1 > 0.88:\n      if x9 > 0.63:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x6 > 0.00:\n        y = 1.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x1 > 0.02:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x10 > 0.01:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 0.5777259630098726,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.08, x3 * x9 * np.abs(x1 - x5) + x2 * x6, x1 * x4 * np.maximum(x3, x7) + x5 * x8)]",
+     "train": 1.0,
+     "val": 0.9131903833658219,
+     "test": 0.9150097465886939,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 0.6621377989986189,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.08, x3 * x9 * np.abs(x1 - x5) + np.sin(x2 * x6), x1 * x4 * np.cos(x3) + np.maximum(x7, x8))]",
+     "train": 1.0,
+     "val": 0.9198180636777128,
+     "test": 0.9173489278752437,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 1.0125089873721296,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.08, x3 * x9 * (1.0 - x1 * x5) + np.sin(x4 * x2), x1 * x4 * np.cos(x3) + x3 * x5 * x6)]",
+     "train": 1.0,
+     "val": 0.9166991552956465,
+     "test": 0.9161793372319688,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 0.7906786464334254,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.08, x3 * x9 * (1.0 - x1 * x5) + np.sin(x4 * x2) * np.cos(x6), x1 * x4 * np.tanh(x3) + x3 * x5 * x7 * np.sin(x8))]",
+     "train": 1.0,
+     "val": 0.91591942820013,
+     "test": 0.9155295646523717,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 0.7906771705292219,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.08, np.sin(x3 * x9) * np.cos(x1 * x5) + np.maximum(x2, x6), x1 * x4 * x7 + x3 * x5 * x8)]",
+     "train": 1.0,
+     "val": 0.9161793372319688,
+     "test": 0.9151397011046134,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.00:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.11:\n        y = 1.\n      else:\n        y = 0.\n  else:\n    if x10 > 0.02:\n      if x1 > 0.02:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.44:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x10 > 0.13:\n        y = 1.\n      else:\n        y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 1.1571294110592487,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.08, x3 * x9 * (x2 + x6) * np.abs(x1 - x5), x1 * x4 * x7 + x3 * x5 * x8 + np.sin(x9))]",
+     "train": 1.0,
+     "val": 0.9178687459389214,
+     "test": 0.9161793372319688,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 1.2259562420133847,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.08, x3 * x9 * (np.abs(x1 - x5) + np.sin(x2 * x6)), x1 * x4 * np.cos(x3) + x7 * x8)]",
+     "train": 1.0,
+     "val": 0.9189083820662768,
+     "test": 0.9148797920727745,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 0.5117168144612003,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.08, x3 * x9 * (np.abs(x1 - x5) + np.tanh(x2 * x6)), x1 * x4 * np.cos(x3) + np.maximum(x7, x8) * np.sin(x9))]",
+     "train": 1.0,
+     "val": 0.9161793372319688,
+     "test": 0.9160493827160494,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 0.8096863805428651,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.08, x3 * x9 * (np.abs(x1 - x5) + np.sin(x2 * x6) * x8), x1 * x4 * np.cos(x3) + np.maximum(x7, x9))]",
+     "train": 1.0,
+     "val": 0.9169590643274854,
+     "test": 0.9166991552956465,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 1.0315266274617907,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.08, x3 * x9 * (np.abs(x1 - x5) + np.maximum(x2, x6)), x1 * x4 * np.cos(x3) + x7 * x8 * x9)]",
+     "train": 1.0,
+     "val": 0.9170890188434048,
+     "test": 0.9182586094866797,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 0.4255830700526698,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.08, x3 * x9 * (np.abs(x1 - x5) + np.maximum(x2, x6) + x8), x1 * x4 * np.cos(x3) + x7 * np.sin(x9))]",
+     "train": 1.0,
+     "val": 0.9173489278752437,
+     "test": 0.9176088369070825,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 0.6480640857583913,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.08, x3 * x9 * (np.abs(x1 - x5) + np.maximum(x2, x6) + x7 + x8), x1 * x4 * np.cos(x3) + x8 * np.sin(x9))]",
+     "train": 1.0,
+     "val": 0.9172189733593242,
+     "test": 0.9163092917478882,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 0.8096863805428651,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.08, np.sin(x3 * x9) * np.abs(x1 - x5) * (x2 + x6 + x7 + x8), x1 * x4 * x3 + x8 * np.cos(x9))]",
+     "train": 1.0,
+     "val": 0.9147498375568551,
+     "test": 0.9166991552956465,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 0.9489967375173015,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.07, x3 * x9 * (x1 + x2 + x5 + x6 + x7 + x8), x4 * np.maximum(x1, x3) * np.cos(x5))]",
+     "train": 1.0,
+     "val": 0.9147498375568551,
+     "test": 0.9155295646523717,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x10 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 0.7524337761430544,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.08, x3 * x9 * (np.abs(x1 - x5) + np.power(x2, 2) + np.power(x6, 2)), x1 * x4 * np.cos(x3) + x7 * x8 * np.sin(x9))]",
+     "train": 1.0,
+     "val": 0.9179987004548408,
+     "test": 0.918648473034438,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x10 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 0.37596150754031366,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.08, x3 * x9 * (np.abs(x1 - x5) + np.maximum(x2, x6) * x8), x1 * x4 * np.cos(x3) + x7 * np.sin(x9) + np.power(x3, 3))]",
+     "train": 1.0,
+     "val": 0.9131903833658219,
+     "test": 0.9147498375568551,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 1.436866504514998,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.08, x3 * x9 * (np.abs(x1 - x5) + np.maximum(x2, x6) * x8), x1 * x4 * np.cos(x3) + x7 * np.sin(np.maximum(x8, x9)))]",
+     "train": 1.0,
+     "val": 0.9155295646523717,
+     "test": 0.9169590643274854,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 0.6480640857583913,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.08, x3 * x9 * (np.abs(x1 - x5) + np.maximum(x2, x6) * x8), x1 * x4 * np.cos(x3) + x7 * np.sin(x9) + x2 * x6)]",
+     "train": 1.0,
+     "val": 0.9161793372319688,
+     "test": 0.9196881091617933,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 0.660872398714863,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.08, x3 * x9 * (np.abs(x1 - x5) + np.maximum(x2, x6) * x8), x1 * x4 * x7 + x3 * np.sin(x9))]",
+     "train": 1.0,
+     "val": 0.9152696556205329,
+     "test": 0.9148797920727745,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 0.8275809226386881,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.08, x3 * x9 * (np.abs(x1 - x5) + np.maximum(x2, x6) * x8), x1 * x4 * np.cos(x3) + x7 * np.sin(x9) + np.power(x3, x2))]",
+     "train": 1.0,
+     "val": 0.9155295646523717,
+     "test": 0.9147498375568551,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 1.436866504514998,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.08, x3 * x9 * (np.abs(x1 - x5) + np.maximum(x2, x6) * x8), x1 * x4 * np.cos(x3) + x7 * np.sin(x9) * np.exp(-x2))]",
+     "train": 1.0,
+     "val": 0.9190383365821962,
+     "test": 0.9181286549707602,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 0.36114805030565483,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.08, x3 * x9 * (np.abs(x1 - x5) + np.maximum(x2, x6) + np.power(x8, 2)), x1 * x4 * np.cos(x3) + x7 * np.sin(x9))]",
+     "train": 1.0,
+     "val": 0.9164392462638077,
+     "test": 0.9194282001299545,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 0.6480640857583913,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.08, x3 * x9 * (np.abs(x1 - x5) + np.power(x2 + x6 + 1, 2)), x1 * x4 * x7 + x3 * x5 * x8 * np.sin(x9) + np.cos(x2 + x6))]",
+     "train": 1.0,
+     "val": 0.9185185185185185,
+     "test": 0.9192982456140351,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 1.247975883873314,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.08, x3 * x9 * (np.abs(x1 - x5) + np.arctan2(x2, x6 + 1)), x1 * x4 * np.cos(x3) + x7 * x8 * np.tanh(x9))]",
+     "train": 1.0,
+     "val": 0.9172189733593242,
+     "test": 0.9192982456140351,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 0.3478745575775798,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.08, x3 * x9 * (np.abs(x1 - x5) + np.tanh(x2 * x6) * x8), x1 * x4 * np.cos(x3) + x7 * np.sin(x9) * np.exp(-x2 * x5))]",
+     "train": 1.0,
+     "val": 0.9172189733593242,
+     "test": 0.9165692007797271,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 0.4198684449818317,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.08, x3 * x9 * (np.abs(x1 - x5) + np.arctan(x2 * x6 + 1)), x1 * x4 * np.cos(x3) + x7 * np.sin(x9))]",
+     "train": 1.0,
+     "val": 0.9160493827160494,
+     "test": 0.917738791423002,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 0.6480640857583913,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.08, x3 * x9 * (np.abs(x1 - x5) + np.arctan(x2 * x6 + 1)), x1 * x4 * np.cos(x3) + x7 * x8 * np.sin(x9))]",
+     "train": 1.0,
+     "val": 0.9191682910981157,
+     "test": 0.9170890188434048,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 0.37596150754031366,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.07, x3 * x9 * np.abs(x1 - x5) + np.tanh(x2 * x6) * np.exp(-x4), x1 * x4 * np.cos(x3) + x7 * x8 * np.sin(x9))]",
+     "train": 1.0,
+     "val": 0.9190383365821962,
+     "test": 0.9173489278752437,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 0.37596150754031366,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.08, x3 * x9 * (np.abs(x1 - x5) + np.tanh(x2 * x6) * np.exp(-x4)), x1 * x4 * np.cos(x3) + x7 * x8 * np.sin(x9) + np.maximum(x2, x6))]",
+     "train": 1.0,
+     "val": 0.9207277452891488,
+     "test": 0.9182586094866797,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 1.3759615075403135,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.08, x3 * x9 * (np.abs(x1 - x5) + np.sin(x2 * x6) * np.exp(-x4)), x1 * x4 * np.cos(x3) + x7 * x8 * np.sin(x9) + np.sin(x1 * x2))]",
+     "train": 1.0,
+     "val": 0.9207277452891488,
+     "test": 0.9187784275503573,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 1.1555089796009872,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.05, x1 * x3 * x9 * np.abs(x5 - x2) + np.sin(x4 * x6), x7 * x8 * np.exp(-x1) + np.cos(x3 * x5))]",
+     "train": 1.0,
+     "val": 0.9189083820662768,
+     "test": 0.9146198830409357,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 4.412551141479143e-05,
+     "col_max": 1.2249417157835625,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.08, x3 * x9 * (np.abs(x1 - x5) + np.sin(x2 * x6) * np.exp(-x4)), x1 * x4 * np.cos(x3) + x7 * x8 * np.sin(x9) + np.sin(x1 * x2) * np.cos(x4))]",
+     "train": 1.0,
+     "val": 0.9215074723846653,
+     "test": 0.9224171539961014,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 1.1538291768265094,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.05, x1 * x3 * np.abs(x5 - x9) + np.tanh(x2 * x6) * np.cos(x7), x4 * x8 * np.sin(x1) + np.maximum(x2, x3))]",
+     "train": 1.0,
+     "val": 0.9160493827160494,
+     "test": 0.91591942820013,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x10 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 1.0372073715621875,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.05, x1 * x3 * x9 * np.abs(x1 - x5) + np.sin(x2 * x6) * np.exp(-x4), x7 * x8 * np.cos(x9) + np.maximum(x1, x4))]",
+     "train": 1.0,
+     "val": 0.919558154645874,
+     "test": 0.9187784275503573,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 1.2619375663608003,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.08, np.tanh(x3 * x9) * (np.abs(x1 - x5) + np.sin(x2 * x6) * np.exp(-x4)), x1 * x4 * np.cos(x3) + x7 * x8 * np.sin(x9) + np.maximum(x1, x2) * np.cos(x4))]",
+     "train": 1.0,
+     "val": 0.9181286549707602,
+     "test": 0.9178687459389214,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 1.3738066640770445,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.07, x1 * x3 * x9 * np.tanh(np.abs(x1 - x5) + x2 * x6), x7 * x8 * np.cos(x9) + np.maximum(x1, x4) * np.exp(-x3))]",
+     "train": 1.0,
+     "val": 0.9185185185185185,
+     "test": 0.9147498375568551,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x10 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 1.1600037549312385,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.08, x1 * x3 * x9 * np.abs(x1 - x5), x7 * x8 * np.sin(x9) + np.maximum(x1, x4) * np.cos(x3))]",
+     "train": 1.0,
+     "val": 0.9161793372319688,
+     "test": 0.917478882391163,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x10 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 1.2661457919620878,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.07, x1 * x3 * x9 * np.tanh(np.abs(x1 - x5) * np.exp(-x4)), x7 * x8 * np.cos(x9) + np.sin(x2 * x6) * np.tanh(x4))]",
+     "train": 1.0,
+     "val": 0.9182586094866797,
+     "test": 0.916829109811566,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x10 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 0.389594732879427,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.08, x3 * x9 * (np.abs(x1 - x5) + np.tanh(x2 * x6)), x1 * x4 * np.cos(x3) + x7 * x8 * np.sin(x9) + np.maximum(x1, x5))]",
+     "train": 1.0,
+     "val": 0.9166991552956465,
+     "test": 0.9172189733593242,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 1.3069986510449754,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.07, x1 * x3 * x9 * np.tanh(np.abs(x1 - x5) + x2 * x6), x7 * x8 * np.cos(x9) * np.exp(-x4))]",
+     "train": 1.0,
+     "val": 0.9191682910981157,
+     "test": 0.9165692007797271,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x10 > 0.00:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.12:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.02:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x10 > 0.38:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x3 > 0.31:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 0.3789389425225179,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.07, x1 * x3 * x9 * np.tanh(np.abs(x1 - x5)), x7 * x8 * np.cos(x9) * np.exp(-x4))]",
+     "train": 1.0,
+     "val": 0.918388564002599,
+     "test": 0.9155295646523717,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x10 > 0.00:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.12:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.02:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x10 > 0.38:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x3 > 0.31:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 0.3789389425225179,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.07, x1 * x3 * x9 * np.tanh(x5) + np.cos(x2 * x6), np.sin(x7 * x8) * np.exp(-x4))]",
+     "train": 1.0,
+     "val": 0.917478882391163,
+     "test": 0.9189083820662768,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 1.1189672436575748,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.08, x3 * x9 * (np.abs(x1 - x5) + np.tanh(x2 * x6) * np.exp(-x4) + np.cos(x1)), x1 * x4 * np.cos(x3) + x7 * x8 * np.sin(x9) + np.maximum(x2, x6) * np.sin(x5))]",
+     "train": 1.0,
+     "val": 0.9189083820662768,
+     "test": 0.9152696556205329,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 0.9481506252146366,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.where(x4 > 0.07, x1 * x3 * x9 * np.tanh(x1 - x5) + np.cos(x2 * x6) * np.exp(-x4), x7 * x8 * np.sin(x3) + np.maximum(x1, x4) * np.sin(x9))]",
+     "train": 1.0,
+     "val": 0.9151397011046134,
+     "test": 0.9163092917478882,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.00:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x3 > 0.24:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 0.019492862955156155,
+     "col_max": 1.0473972675024528,
+     "source": "proposed"
+    }
+   ],
+   "done": true,
+   "best_rule": "x10 = [np.where(x4 > 0.08, x3 * x9 * (np.abs(x1 - x5) + np.sin(x2 * x6) * np.exp(-x4)), x1 * x4 * np.cos(x3) + x7 * x8 * np.sin(x9) + np.sin(x1 * x2) * np.cos(x4))]",
+   "accepted": true
+  }
+ ],
+ "accepted": [
+  {
+   "rule": "x9 = [np.where(x4 > 0.07, x1 * x3 * x4 + np.sin(x6 * x8) * (1 - x2), np.cos(x5 * x7) + x1 * x2 * (1 - x4))]",
+   "train": 1.0,
+   "val": 0.9176088369070825,
+   "test": 0.9164392462638077,
+   "col_min": 0.0,
+   "col_max": 1.967663111276671
+  },
+  {
+   "rule": "x10 = [np.where(x4 > 0.08, x3 * x9 * (np.abs(x1 - x5) + np.sin(x2 * x6) * np.exp(-x4)), x1 * x4 * np.cos(x3) + x7 * x8 * np.sin(x9) + np.sin(x1 * x2) * np.cos(x4))]",
+   "train": 1.0,
+   "val": 0.9215074723846653,
+   "test": 0.9224171539961014,
+   "col_min": 0.0,
+   "col_max": 1.1538291768265094
+  }
+ ],
+ "finished": true,
+ "timing": {
+  "llm": 97.41523957252502,
+  "xgboost": 970.4789006710052,
+  "cart": 26.49232292175293,
+  "rule": 27.954253911972046
+ },
+ "llm_calls": 104,
+ "invalid_answers": 4,
+ "prompt_tokens": 223129,
+ "completion_tokens": 8130,
+ "final": {
+  "val": 0.9215074723846653,
+  "test": 0.9224171539961014,
+  "test_error": 7.758284600389864,
+  "baseline_error": 8.408057179987004,
+  "rules": [
+   "x9 = [np.where(x4 > 0.07, x1 * x3 * x4 + np.sin(x6 * x8) * (1 - x2), np.cos(x5 * x7) + x1 * x2 * (1 - x4))]",
+   "x10 = [np.where(x4 > 0.08, x3 * x9 * (np.abs(x1 - x5) + np.sin(x2 * x6) * np.exp(-x4)), x1 * x4 * np.cos(x3) + x7 * x8 * np.sin(x9) + np.sin(x1 * x2) * np.cos(x4))]"
+  ]
+ }
+}
