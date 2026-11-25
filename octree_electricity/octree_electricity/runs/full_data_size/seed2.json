@@ -1,0 +1,158 @@
+[
+ {
+  "seed": 2,
+  "fraction": 0.1,
+  "train_rows": 2308,
+  "features": "original",
+  "rules": [],
+  "val": 0.8157244964262508,
+  "test": 0.8359974009096817,
+  "test_error": 16.400259909031835,
+  "seconds": 16.18309259414673
+ },
+ {
+  "seed": 2,
+  "fraction": 0.1,
+  "train_rows": 2308,
+  "features": "hand-made",
+  "rules": [
+   "x9 = [x4 - x6]",
+   "x10 = [1.0 if 14 / 47 <= x3 < 44 / 47 else 0.0]"
+  ],
+  "val": 0.8167641325536062,
+  "test": 0.8366471734892788,
+  "test_error": 16.335282651072124,
+  "seconds": 16.45149874687195
+ },
+ {
+  "seed": 2,
+  "fraction": 0.1,
+  "train_rows": 2308,
+  "features": "OCTree",
+  "rules": [
+   "x9 = [x4 * x1]",
+   "x10 = [np.where(x4 > 0.07, (x4 + np.tanh(x1 * x2)) * (x3 + x5 + x6 + x7 + x8 + x9) + np.sin(x4 * np.cos(x1)) + np.maximum(x4, x2) * np.cos(x3 * x5) + np.tanh(x8 * x9), np.tanh(x1 * x2) * np.exp(-np.abs(x4 - 0.07)) + np.minimum(x3, x4) * np.cos(x1 * x2) + np.sin(x8 * x9) + np.cos(x5 * x6))]"
+  ],
+  "val": 0.8214424951267056,
+  "test": 0.8365172189733593,
+  "test_error": 16.34827810266407,
+  "seconds": 17.8062801361084
+ },
+ {
+  "seed": 2,
+  "fraction": 0.25,
+  "train_rows": 5771,
+  "features": "original",
+  "rules": [],
+  "val": 0.8532813515269656,
+  "test": 0.8641975308641975,
+  "test_error": 13.580246913580252,
+  "seconds": 19.570738077163696
+ },
+ {
+  "seed": 2,
+  "fraction": 0.25,
+  "train_rows": 5771,
+  "features": "hand-made",
+  "rules": [
+   "x9 = [x4 - x6]",
+   "x10 = [1.0 if 14 / 47 <= x3 < 44 / 47 else 0.0]"
+  ],
+  "val": 0.8549707602339182,
+  "test": 0.8639376218323587,
+  "test_error": 13.606237816764132,
+  "seconds": 18.561214447021484
+ },
+ {
+  "seed": 2,
+  "fraction": 0.25,
+  "train_rows": 5771,
+  "features": "OCTree",
+  "rules": [
+   "x9 = [x4 * x1]",
+   "x10 = [np.where(x4 > 0.07, (x4 + np.tanh(x1 * x2)) * (x3 + x5 + x6 + x7 + x8 + x9) + np.sin(x4 * np.cos(x1)) + np.maximum(x4, x2) * np.cos(x3 * x5) + np.tanh(x8 * x9), np.tanh(x1 * x2) * np.exp(-np.abs(x4 - 0.07)) + np.minimum(x3, x4) * np.cos(x1 * x2) + np.sin(x8 * x9) + np.cos(x5 * x6))]"
+  ],
+  "val": 0.8622482131254061,
+  "test": 0.8713450292397661,
+  "test_error": 12.865497076023392,
+  "seconds": 20.06756043434143
+ },
+ {
+  "seed": 2,
+  "fraction": 0.5,
+  "train_rows": 11542,
+  "features": "original",
+  "rules": [],
+  "val": 0.8844704353476284,
+  "test": 0.891358024691358,
+  "test_error": 10.864197530864194,
+  "seconds": 21.550367832183838
+ },
+ {
+  "seed": 2,
+  "fraction": 0.5,
+  "train_rows": 11542,
+  "features": "hand-made",
+  "rules": [
+   "x9 = [x4 - x6]",
+   "x10 = [1.0 if 14 / 47 <= x3 < 44 / 47 else 0.0]"
+  ],
+  "val": 0.8803118908382066,
+  "test": 0.8947368421052632,
+  "test_error": 10.526315789473683,
+  "seconds": 21.474254608154297
+ },
+ {
+  "seed": 2,
+  "fraction": 0.5,
+  "train_rows": 11542,
+  "features": "OCTree",
+  "rules": [
+   "x9 = [x4 * x1]",
+   "x10 = [np.where(x4 > 0.07, (x4 + np.tanh(x1 * x2)) * (x3 + x5 + x6 + x7 + x8 + x9) + np.sin(x4 * np.cos(x1)) + np.maximum(x4, x2) * np.cos(x3 * x5) + np.tanh(x8 * x9), np.tanh(x1 * x2) * np.exp(-np.abs(x4 - 0.07)) + np.minimum(x3, x4) * np.cos(x1 * x2) + np.sin(x8 * x9) + np.cos(x5 * x6))]"
+  ],
+  "val": 0.8883690708252112,
+  "test": 0.8978557504873295,
+  "test_error": 10.214424951267054,
+  "seconds": 22.078206777572632
+ },
+ {
+  "seed": 2,
+  "fraction": 1.0,
+  "train_rows": 23084,
+  "features": "original",
+  "rules": [],
+  "val": 0.9082521117608837,
+  "test": 0.9126705653021443,
+  "test_error": 8.732943469785571,
+  "seconds": 24.849266529083252
+ },
+ {
+  "seed": 2,
+  "fraction": 1.0,
+  "train_rows": 23084,
+  "features": "hand-made",
+  "rules": [
+   "x9 = [x4 - x6]",
+   "x10 = [1.0 if 14 / 47 <= x3 < 44 / 47 else 0.0]"
+  ],
+  "val": 0.910461338531514,
+  "test": 0.9147498375568551,
+  "test_error": 8.525016244314488,
+  "seconds": 23.621388912200928
+ },
+ {
+  "seed": 2,
+  "fraction": 1.0,
+  "train_rows": 23084,
+  "features": "OCTree",
+  "rules": [
+   "x9 = [x4 * x1]",
+   "x10 = [np.where(x4 > 0.07, (x4 + np.tanh(x1 * x2)) * (x3 + x5 + x6 + x7 + x8 + x9) + np.sin(x4 * np.cos(x1)) + np.maximum(x4, x2) * np.cos(x3 * x5) + np.tanh(x8 * x9), np.tanh(x1 * x2) * np.exp(-np.abs(x4 - 0.07)) + np.minimum(x3, x4) * np.cos(x1 * x2) + np.sin(x8 * x9) + np.cos(x5 * x6))]"
+  ],
+  "val": 0.9181286549707602,
+  "test": 0.9229369720597791,
+  "test_error": 7.706302794022091,
+  "seconds": 25.406333446502686
+ }
+]

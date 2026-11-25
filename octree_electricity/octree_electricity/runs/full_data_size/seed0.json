@@ -1,0 +1,146 @@
+[
+ {
+  "seed": 0,
+  "fraction": 0.1,
+  "train_rows": 2308,
+  "features": "original",
+  "rules": [],
+  "val": 0.8258609486679662,
+  "test": 0.825211176088369,
+  "test_error": 17.478882391163097,
+  "seconds": 5.356766700744629
+ },
+ {
+  "seed": 0,
+  "fraction": 0.1,
+  "train_rows": 2308,
+  "features": "hand-made",
+  "rules": [],
+  "val": 0.8258609486679662,
+  "test": 0.825211176088369,
+  "test_error": 17.478882391163097,
+  "seconds": 5.92016339302063
+ },
+ {
+  "seed": 0,
+  "fraction": 0.1,
+  "train_rows": 2308,
+  "features": "OCTree",
+  "rules": [
+   "x9 = [np.where(x4 > 0.07, x1 * x3 * x4 + np.sin(x6 * x8) * (1 - x2), np.cos(x5 * x7) + x1 * x2 * (1 - x4))]",
+   "x10 = [np.where(x4 > 0.08, x3 * x9 * (np.abs(x1 - x5) + np.sin(x2 * x6) * np.exp(-x4)), x1 * x4 * np.cos(x3) + x7 * x8 * np.sin(x9) + np.sin(x1 * x2) * np.cos(x4))]"
+  ],
+  "val": 0.8266406757634828,
+  "test": 0.8253411306042885,
+  "test_error": 17.465886939571153,
+  "seconds": 5.221046447753906
+ },
+ {
+  "seed": 0,
+  "fraction": 0.25,
+  "train_rows": 5771,
+  "features": "original",
+  "rules": [],
+  "val": 0.8639376218323587,
+  "test": 0.8636777128005199,
+  "test_error": 13.632228719948014,
+  "seconds": 7.712519884109497
+ },
+ {
+  "seed": 0,
+  "fraction": 0.25,
+  "train_rows": 5771,
+  "features": "hand-made",
+  "rules": [],
+  "val": 0.8639376218323587,
+  "test": 0.8636777128005199,
+  "test_error": 13.632228719948014,
+  "seconds": 6.875295400619507
+ },
+ {
+  "seed": 0,
+  "fraction": 0.25,
+  "train_rows": 5771,
+  "features": "OCTree",
+  "rules": [
+   "x9 = [np.where(x4 > 0.07, x1 * x3 * x4 + np.sin(x6 * x8) * (1 - x2), np.cos(x5 * x7) + x1 * x2 * (1 - x4))]",
+   "x10 = [np.where(x4 > 0.08, x3 * x9 * (np.abs(x1 - x5) + np.sin(x2 * x6) * np.exp(-x4)), x1 * x4 * np.cos(x3) + x7 * x8 * np.sin(x9) + np.sin(x1 * x2) * np.cos(x4))]"
+  ],
+  "val": 0.8626380766731644,
+  "test": 0.8674463937621832,
+  "test_error": 13.255360623781677,
+  "seconds": 7.961383819580078
+ },
+ {
+  "seed": 0,
+  "fraction": 0.5,
+  "train_rows": 11542,
+  "features": "original",
+  "rules": [],
+  "val": 0.8827810266406758,
+  "test": 0.8844704353476284,
+  "test_error": 11.552956465237163,
+  "seconds": 8.483908414840698
+ },
+ {
+  "seed": 0,
+  "fraction": 0.5,
+  "train_rows": 11542,
+  "features": "hand-made",
+  "rules": [],
+  "val": 0.8827810266406758,
+  "test": 0.8844704353476284,
+  "test_error": 11.552956465237163,
+  "seconds": 9.451042652130127
+ },
+ {
+  "seed": 0,
+  "fraction": 0.5,
+  "train_rows": 11542,
+  "features": "OCTree",
+  "rules": [
+   "x9 = [np.where(x4 > 0.07, x1 * x3 * x4 + np.sin(x6 * x8) * (1 - x2), np.cos(x5 * x7) + x1 * x2 * (1 - x4))]",
+   "x10 = [np.where(x4 > 0.08, x3 * x9 * (np.abs(x1 - x5) + np.sin(x2 * x6) * np.exp(-x4)), x1 * x4 * np.cos(x3) + x7 * x8 * np.sin(x9) + np.sin(x1 * x2) * np.cos(x4))]"
+  ],
+  "val": 0.8934372969460689,
+  "test": 0.8899285250162443,
+  "test_error": 11.00714749837557,
+  "seconds": 9.112509489059448
+ },
+ {
+  "seed": 0,
+  "fraction": 1.0,
+  "train_rows": 23084,
+  "features": "original",
+  "rules": [],
+  "val": 0.9134502923976608,
+  "test": 0.91591942820013,
+  "test_error": 8.408057179987004,
+  "seconds": 9.634313106536865
+ },
+ {
+  "seed": 0,
+  "fraction": 1.0,
+  "train_rows": 23084,
+  "features": "hand-made",
+  "rules": [],
+  "val": 0.9134502923976608,
+  "test": 0.91591942820013,
+  "test_error": 8.408057179987004,
+  "seconds": 9.817140579223633
+ },
+ {
+  "seed": 0,
+  "fraction": 1.0,
+  "train_rows": 23084,
+  "features": "OCTree",
+  "rules": [
+   "x9 = [np.where(x4 > 0.07, x1 * x3 * x4 + np.sin(x6 * x8) * (1 - x2), np.cos(x5 * x7) + x1 * x2 * (1 - x4))]",
+   "x10 = [np.where(x4 > 0.08, x3 * x9 * (np.abs(x1 - x5) + np.sin(x2 * x6) * np.exp(-x4)), x1 * x4 * np.cos(x3) + x7 * x8 * np.sin(x9) + np.sin(x1 * x2) * np.cos(x4))]"
+  ],
+  "val": 0.9215074723846653,
+  "test": 0.9224171539961014,
+  "test_error": 7.758284600389864,
+  "seconds": 10.253770351409912
+ }
+]
