@@ -1,0 +1,1093 @@
+{
+ "config": {
+  "seed": 1,
+  "n_iters": 50,
+  "max_features": 2,
+  "use_tree": false,
+  "cart_max_depth": 4,
+  "n_estimators": null,
+  "proposer": "gemini:gemini-3.5-flash-lite"
+ },
+ "baseline": {
+  "train": 1.0,
+  "val": 0.9139701104613386,
+  "test": 0.9163092917478882
+ },
+ "rounds": [
+  {
+   "target": 9,
+   "trajectory": [
+    {
+     "rule": "x9 = [x4 * x1]",
+     "train": 1.0,
+     "val": 0.9134502923976608,
+     "test": 0.9164392462638077,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x9 > 0.00:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.12:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x9 > 0.03:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 0.8720954321000001,
+     "source": "initial"
+    },
+    {
+     "rule": "x9 = [x4 * x1 * x8 - x3]",
+     "train": 1.0,
+     "val": 0.9098115659519168,
+     "test": 0.9102014294996751,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x9 > 0.65:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\n    else:\n      if x9 > 0.12:\n        y = 1.\n      else:\n        y = 1.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": -0.9999972535340438,
+     "col_max": 0.18229291448545726,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4 * x1, x8 - x3)]",
+     "train": 1.0,
+     "val": 0.9083820662768031,
+     "test": 0.9134502923976608,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 0.8720954321000001,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4 * x1 * x6, x8 - x3 + x5)]",
+     "train": 1.0,
+     "val": 0.910461338531514,
+     "test": 0.9146198830409357,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 1.4158763825399352,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4 * x1 * x6, x8 - x3 + x5 * x7) * (x2 + 1)]",
+     "train": 1.0,
+     "val": 0.9116309291747888,
+     "test": 0.9124106562703054,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 2.0038408833152146,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4 * x1 * x6 + x2, x8 - x3 + x5 * x7) * (x1 + x2 + x6 + x7)]",
+     "train": 1.0,
+     "val": 0.9178687459389214,
+     "test": 0.918388564002599,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 3.531044584122519e-08,
+     "col_max": 2.6798232739622936,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4 * x1 * x6 + x2 * x5, x8 - x3 + x5 * x7 * x6) * (x1 + x2 + x3 + x6 + x7 + x8)]",
+     "train": 1.0,
+     "val": 0.9094217024041585,
+     "test": 0.9131903833658219,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 9.029176178863194e-08,
+     "col_max": 3.0134553121365952,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4 * x1 * x6 * x7 + x2 * x5, x8 - x3 + x5 * x7 * x6) * (x1 + x2 + x3 + x4 + x5 + x6 + x7 + x8)]",
+     "train": 1.0,
+     "val": 0.9109811565951916,
+     "test": 0.9146198830409357,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 5.51942895744456e-08,
+     "col_max": 4.237706725259677,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4 * x1 * x6 + x2 * x5, x8 - x3 + x5 * x7 * x6) * (x1 + x2 + x3 + x4 + x5 + x6 + x7 + x8) + x4 * x1 * x8 - x3 + np.maximum(x4 * x1 * x6, x8 - x3 + x5) * (x2 + 1)]",
+     "train": 1.0,
+     "val": 0.909551656920078,
+     "test": 0.9115009746588694,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": -0.9999701305775065,
+     "col_max": 5.6765694465939145,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4 * x1 * x6, x8 - x3 + x5 * x7) * (x1 + x2 + x3 + x4 + x5 + x6 + x7 + x8) + np.minimum(x2 * x5 * x6, x4 + x8)]",
+     "train": 1.0,
+     "val": 0.9108512020792723,
+     "test": 0.9150097465886939,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 1.895697776459525e-07,
+     "col_max": 4.134180207284747,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4 * x1 * x6 + x2 * x5 * x7, x8 - x3 + x5 * x7 * x6) * (x1 + x2 + x3 + x4 + x5 + x6 + x7 + x8) + np.sin(x4 * x1 * x6) * np.cos(x8 - x3)]",
+     "train": 1.0,
+     "val": 0.9096816114359974,
+     "test": 0.9164392462638077,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x9 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 2.0056548942785346e-07,
+     "col_max": 3.125827903377274,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4 * x1 * x6 + x2, x8 - x3 + x5 * x7) * (x1 + x2 + x6 + x7) * np.abs(x1 - x3 + x5 - x7) + np.sin(x4 * x8) * (x2 + x6 + 1)]",
+     "train": 1.0,
+     "val": 0.9108512020792723,
+     "test": 0.9147498375568551,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 0.008567225211327715,
+     "col_max": 2.7637254404682765,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(np.maximum(x4 * x1 * x6, x8 - x3 + x5 * x7), x2 * x5 * x6 * x7 + x1 * x3 * x4 * x8) * (x1 + x2 + x3 + x4 + x5 + x6 + x7 + x8 + np.sin(x4 * x8) * np.cos(x2 * x6))]",
+     "train": 1.0,
+     "val": 0.9094217024041585,
+     "test": 0.9130604288499026,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 1.876097244023134e-05,
+     "col_max": 4.2485818739515,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4 * x1 * x6 + x2, x8 - x3 + x5 * x7) * (x1 + x2 + x6 + x7) * np.cos(x3 * x5) + np.tan(x1 * x8 * 0.5) * (x3 + x6 + x7)]",
+     "train": 1.0,
+     "val": 0.9157894736842105,
+     "test": 0.9194282001299545,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 5.738040609198756e-05,
+     "col_max": 2.7086427427859237,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.exp(-np.abs(x1 - x8)) * np.maximum(x4 * x1 * x6 + x2, x8 - x3 + x5 * x7) * (x1 + x2 + x6 + x7) + np.sin(x4 * x8 * x3) * (x2 + x6 + x5 + 1) * np.cos(x1 * x7)]",
+     "train": 1.0,
+     "val": 0.9142300194931774,
+     "test": 0.9143599740090969,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 0.010118197378912173,
+     "col_max": 2.757785797447324,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.exp(-np.abs(x1 - x8 + x3 - x6)) * np.maximum(x4 * x1 * x6 + x2 * x5, x8 - x3 + x5 * x7 * x6) * (x1 + x2 + x3 + x4 + x5 + x6 + x7 + x8) + np.sin(x4 * x8 * x3 * x1) * (x2 + x6 + x5 + x7 + 1) * np.cos(x1 * x7 * x4)]",
+     "train": 1.0,
+     "val": 0.9092917478882391,
+     "test": 0.9143599740090969,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 7.199376990719404e-06,
+     "col_max": 2.949759099622109,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4 * x1 * x6 + x2, x8 - x3 + x5 * x7) * (x1 + x2 + x6 + x7) * np.cos(x3 * x5) + np.sin(x4 * x8) * (x1 + x3 + x6 + x7) * np.tanh(x2 * x5)]",
+     "train": 1.0,
+     "val": 0.916829109811566,
+     "test": 0.9170890188434048,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 3.2551976619957335e-08,
+     "col_max": 2.984053661287381,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4 * x1 * x6 + x2, x8 - x3 + x5 * x7) * (x1 + x2 + x6 + x7) * np.cos(x3 * x5) + np.sin(x4 * x8) * (x1 + x3 + x6 + x7 + np.tanh(x2 * x5 * x1))]",
+     "train": 1.0,
+     "val": 0.9173489278752437,
+     "test": 0.9164392462638077,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 0.015025468769454476,
+     "col_max": 3.679879320182227,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4 * x1 * x6 + x2, x8 - x3 + x5 * x7) * (x1 + x2 + x6 + x7) * np.cos(x3 * x5) + np.sin(x4 * x8) * (x1 + x3 + x6 + x7 + np.tanh(x2 * x5 * x1)) * np.exp(-np.abs(x4 - x5))]",
+     "train": 1.0,
+     "val": 0.9164392462638077,
+     "test": 0.9176088369070825,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 0.01043427562973284,
+     "col_max": 3.452855619816703,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4 * x1 * x6 + x2, x8 - x3 + x5 * x7) * (x1 + x2 + x6 + x7) * np.cos(x3 * x5) + np.sin(x4 * x8) * (x1 + x3 + x6 + x7 + np.tanh(x2 * x5 * x1)) * np.cos(x4 * x1 * x6)]",
+     "train": 1.0,
+     "val": 0.91591942820013,
+     "test": 0.9172189733593242,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 0.015025468760198498,
+     "col_max": 3.677501065714286,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4 * x1 * x6 + x2, x8 - x3 + x5 * x7) * (x1 + x2 + x6 + x7) * np.cos(x3 * x5) + np.sin(x4 * x8) * (x1 + x3 + x6 + x7 + np.tanh(x2 * x5 * x1)) * np.exp(-np.abs(x4 - x5)) * np.tanh(x1 * x2 * x3 * x4 * x5 * x6 * x7 * x8)]",
+     "train": 1.0,
+     "val": 0.9166991552956465,
+     "test": 0.9169590643274854,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 3.2551976619957335e-08,
+     "col_max": 2.4487136547356583,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4 * x1 * x6 + x2, x8 - x3 + x5 * x7) * (x1 + x2 + x6 + x7) * np.cos(x3 * x5) + np.sin(x4 * x8) * (x1 + x3 + x6 + x7 + np.tanh(x2 * x5 * x1)) * np.exp(-np.abs(x4 - x5)) * np.tanh(x1 * x2 * x3 * x4 * x5 * x6 * x7 * x8) + np.sinh(x1 * x3 * x6)]",
+     "train": 1.0,
+     "val": 0.9138401559454191,
+     "test": 0.9169590643274854,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 6.28281306034962e-07,
+     "col_max": 2.4488755833238303,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4 * x1 * x6 + x2, x8 - x3 + x5 * x7) * (x1 + x2 + x6 + x7) * np.cos(x3 * x5) + np.sin(x4 * x8) * (x1 + x3 + x6 + x7 + np.tanh(x2 * x5 * x1)) * np.exp(-np.abs(x4 - x5)) * (np.maximum(x1 * x3 * x6, x2 * x5 * x7) + np.cos(x8 * x2))]",
+     "train": 1.0,
+     "val": 0.9161793372319688,
+     "test": 0.9190383365821962,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 0.010434559337127615,
+     "col_max": 3.6939321480462217,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.sin(x8 * x5 * x2) * np.tanh(x1 + x3 + x4 + x6 + x7) + np.cos(np.maximum(x1 * x6, x3 * x7) * x2) * (np.maximum(x4, x5) - np.minimum(x2, x8)) * np.cos(x1 * x2 * x3 * x4 * x5 * x6 * x7 * x8)]",
+     "train": 1.0,
+     "val": 0.9079922027290448,
+     "test": 0.9100714749837557,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x9 > 0.61:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": -0.7962506400536432,
+     "col_max": 0.898096,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x8 * x7 * x6 * x5, x4 * x3 * x2 * x1) * np.tanh(np.abs(x1 - x2) + np.abs(x3 - x4) + np.abs(x5 - x6) + np.abs(x7 - x8)) * (x1 * x3 * x5 * x7 + x2 * x4 * x6 * x8) * np.cos(x1 + x3 + x5 + x7)]",
+     "train": 1.0,
+     "val": 0.9116309291747888,
+     "test": 0.9142300194931774,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x9 > 1.00:\n    if x4 > 0.06:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 0.\n    else:\n      if x5 > 0.25:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x1 > 0.88:\n      if x2 > 0.08:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x6 > 0.00:\n        y = 1.\n      else:\n        y = 0.\n",
+     "col_min": -0.15785241719889564,
+     "col_max": 2.0891877818892767e-05,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.exp(-np.abs(x1 - x8)) * np.maximum(x3 * x5 * x7, x2 * x4 * x6) + (np.sin(x1 + x3 + x5 + x7) * np.cos(x2 + x4 + x6 + x8)) * np.tanh((x1 * x3 * x5 * x7 + 1) * (x2 * x4 * x6 * x8 + 1))]",
+     "train": 1.0,
+     "val": 0.9150097465886939,
+     "test": 0.9137102014294997,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": -0.32267736027228655,
+     "col_max": 0.7976476635947368,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.tanh((x1 + x2 + x3 + x4 + x5 + x6 + x7 + x8) * np.maximum(x1 * x4 * x6, x8 - x3 + x5 * x7)) * np.cos(x1 * x2 * x3 * x4 * x5 * x6 * x7 * x8) + np.sin(np.maximum(x1 * x2, x3 * x4) * np.maximum(x5 * x6, x7 * x8)) * (x1 * x3 * x5 * x7 + np.tanh(x2 * x4 * x6 * x8))]",
+     "train": 1.0,
+     "val": 0.9087719298245615,
+     "test": 0.9147498375568551,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 4.5660568154346836e-08,
+     "col_max": 1.1352948940162058,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.sin(x8 * x5 * x2) * np.cos(x4 * x1 * x6) * (np.maximum(x1 * x6, x3 * x7) + np.tanh(x2 * x5 * x8)) + (x1 + x3 + x6 + x7 + x8) * np.exp(-np.abs(x4 - x2)) * np.maximum(x1 * x4 * x6 + x3, x8 - x2 + x5 * x7)]",
+     "train": 1.0,
+     "val": 0.9120207927225471,
+     "test": 0.9125406107862248,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x9 > 0.12:\n        y = 1.\n      else:\n        y = 0.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 0.001176739166910876,
+     "col_max": 3.8485996109019873,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.tanh((x1 + x2 + x3 + x4 + x5 + x6 + x7 + x8) * np.sin(x1 * x2 * x3 * x4 * x5 * x6 * x7 * x8)) * np.cos(np.maximum(x1 * x4 * x6, x5 * x7 * x8) * (x2 + x3)) + np.sin(np.maximum(x4 - x1, x8 - x3) + np.tanh(x1 * x2 * x3 * x4 * x5 * x6 * x7 * x8))]",
+     "train": 1.0,
+     "val": 0.9138401559454191,
+     "test": 0.9146198830409357,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": -0.7204597218357117,
+     "col_max": 0.7578598859234709,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.tanh((x1 + x2 + x3 + x4 + x5 + x6 + x7 + x8) * (x1 * x4 * x6 + x2 * x5 * x7)) * np.cos(x8 * x3 - x1 * x6) + np.sin((np.maximum(x1 * x4, x2 * x5) + x6 * x7) * (x3 + x8))]",
+     "train": 1.0,
+     "val": 0.9131903833658219,
+     "test": 0.9173489278752437,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 1.850949701383047,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.tanh(x1 + x2 + x3 + x4 + x5 + x6 + x7 + x8) * np.sin(x1 * x2 * x3 * x4 * x5 * x6 * x7 * x8) * np.maximum(np.maximum(x1 * x4 * x6, x3 * x5 * x7), x2 + x8)]",
+     "train": 1.0,
+     "val": 0.9124106562703054,
+     "test": 0.9138401559454191,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 0.014558569663953249,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.sin(x8 * x5) * np.tanh(x1 + x2 + x3 + x4 + x6 + x7) + np.cos(np.maximum(x1 * x4 * x6, x3 * x5 * x7)) * (x2 + x8) * np.exp(-np.abs(x1 - x8))]",
+     "train": 1.0,
+     "val": 0.9142300194931774,
+     "test": 0.9150097465886939,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 0.10327115596097261,
+     "col_max": 2.340264319293891,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.sin(x8 * x5) * np.tanh(x1 + x2 + x3 + x4 + x6 + x7) + np.maximum(x1 * x4 * x6, x2 * x3 * x5 * x7) * np.cos(x8 * (x1 + x2 + x3 + x4 + x5 + x6 + x7))]",
+     "train": 1.0,
+     "val": 0.910461338531514,
+     "test": 0.9100714749837557,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x9 > 0.20:\n      if x3 > 0.86:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x2 > 0.08:\n        y = 0.\n      else:\n        y = 1.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 5.505093910434571e-06,
+     "col_max": 0.5383916296188638,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.sin(x8 * x5) * np.tanh(x1 + x2 + x3 + x4 + x6 + x7) + np.cos(x4 * x6 * x1) * (np.maximum(x1 * x2 * x3, x5 * x6 * x7) + np.abs(x8 - x2))]",
+     "train": 1.0,
+     "val": 0.9157894736842105,
+     "test": 0.9192982456140351,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 0.08261709863111534,
+     "col_max": 1.7577767296438478,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.sin(x4 * x8) * (x1 + x2 + x3 + x4 + x5 + x6 + x7 + x8) * np.tanh(np.maximum(x1 * x6, x3 * x7) * (x2 + x5)) + np.cos(x1 * x2 * x3 * x4 * x5 * x6 * x7 * x8) * np.maximum(x8 - x3 + x1 * x6, x2 * x5 * x7)]",
+     "train": 1.0,
+     "val": 0.908641975308642,
+     "test": 0.9155295646523717,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x9 > 0.04:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 0.0007428176048129319,
+     "col_max": 2.119994093407078,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4 * x1 * x6 + x2, x8 - x3 + x5 * x7) * (x1 + x2 + x6 + x7) * np.cos(x3 * x5) + np.sin(x4 * x8) * (x1 + x3 + x6 + x7 + np.tanh(x2 * x5 * x1)) * np.exp(-np.abs(x4 - x5)) * np.tanh(x1 * x2 * x3 * x4 * x5 * x6 * x7 * x8) * np.maximum(x1 + x3 + x5 + x7, x2 + x4 + x6 + x8)]",
+     "train": 1.0,
+     "val": 0.9146198830409357,
+     "test": 0.9153996101364522,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 3.2551976619957335e-08,
+     "col_max": 2.448713783151355,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.exp(-np.abs(x1 - x8)) * (np.maximum(x3 * x6 * x7, x2 * x4 * x5) + np.sin(x1 + x2 + x3 + x4 + x5 + x6 + x7 + x8)) * np.tanh(np.maximum(x1 * x4 * x6, x3 * x5 * x7) * np.cos(x2 * x8))]",
+     "train": 1.0,
+     "val": 0.9107212475633528,
+     "test": 0.9143599740090969,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": -0.36953869412428014,
+     "col_max": 0.10690280716642506,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.tanh(x4 * x6 * x1 * x2) * np.maximum(x8 + x5 * x7, x3 + x1) * (x1 + x2 + x3 + x4 + x5 + x6 + x7 + x8) + np.sin(x8 * x2) * np.cos(x3 * x5 * x1) * (np.abs(x4 - x6) + np.tanh(x7 * x2))]",
+     "train": 1.0,
+     "val": 0.9176088369070825,
+     "test": 0.9191682910981157,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 1.1553098584395554,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.sin(x8 * x2) * np.tanh(x4 * x1 * x6 + x2) * np.exp(-np.abs(x3 - x5)) * (x1 + x2 + x3 + x4 + x5 + x6 + x7 + x8) + np.maximum(x4 * x6 * np.cos(x1), x8 - x3 + x5 * x7) * np.cos(x3 * x5) * (x1 + x2 + x6 + x7 + np.tanh(x4 * x8))]",
+     "train": 1.0,
+     "val": 0.9115009746588694,
+     "test": 0.9138401559454191,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 1.5058976055517335e-05,
+     "col_max": 3.9005236843424855,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4 * x1 * x6 + x2, x8 - x3 + x5 * x7) * (x1 + x2 + x6 + x7) * np.cos(x3 * x5) + np.sin(x4 * x8) * (x1 + x3 + x6 + x7 + np.tanh(x2 * x5 * x1)) * np.exp(-np.abs(x4 - x5)) * np.tanh(np.maximum(x1 * x3 * x6, x2 * x5 * x7) + np.cos(x8 * x2)) * (np.abs(x1 - x8) + np.sin(x2 * x3 * x4 * x5 * x6 * x7))]",
+     "train": 1.0,
+     "val": 0.9165692007797271,
+     "test": 0.9178687459389214,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 4.3995871204258306e-05,
+     "col_max": 2.6534007570306115,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.sin(x4 * x8) * (x1 + x2 + x3 + x4 + x5 + x6 + x7 + x8) * np.tanh(x1 * x2 * x3 * x4 * x5 * x6 * x7 * x8) + np.maximum(x4 * x1 * x6 + x2, x8 - x3 + x5 * x7) * np.cos(x3 * x5 * x1) * (np.abs(x1 - x8) + np.tanh(x7 * x2) + np.sin(x2 * x3 * x4 * x5 * x6 * x7))]",
+     "train": 1.0,
+     "val": 0.9178687459389214,
+     "test": 0.917738791423002,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 3.42905373518421e-08,
+     "col_max": 1.1243910576147038,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x1 * x2 * x3 * x4, x5 * x6 * x7 * x8) * np.cos(x1 + x2 + x3 + x4 + x5 + x6 + x7 + x8) + np.sin(np.maximum(x1 * x6, x3 * x8)) * (x1 * x2 * x3 + x4 * x5 * x6 + x7 + x8) * np.tanh(np.abs(x1 - x5) + np.abs(x2 - x6) + np.abs(x3 - x7) + np.abs(x4 - x8)) + np.exp(-np.abs(x1 * x3 * x5 * x7 - x2 * x4 * x6 * x8)) * (x1 + x3 + x5 + x7 - x2 - x4 - x6 - x8)]",
+     "train": 1.0,
+     "val": 0.91137102014295,
+     "test": 0.9122807017543859,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x9 > 0.47:\n        y = 1.\n      else:\n        y = 0.\n    else:\n      if x9 > 0.61:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": -1.0212866694027674,
+     "col_max": 2.433268205922671,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(np.tanh(x4 * x1 * x6 + x2), np.cos(x8 - x3 + x5 * x7)) * (x1 + x2 + x6 + x7 + np.sin(x3 * x5)) + np.sinh(x4 * x8 * 0.1) * (x1 + x3 + x6 + x7 + np.tanh(x2 * x5 * x1)) * np.exp(-np.abs(x4 - x5)) * np.maximum(x1 * x3 * x6, x2 * x5 * x7)]",
+     "train": 1.0,
+     "val": 0.9135802469135802,
+     "test": 0.9142300194931774,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 0.36123795903612776,
+     "col_max": 3.069670867351108,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.sin(x4 * x8 + x1) * np.maximum(x4 * x1 * x6 + x2, x8 - x3 + x5 * x7) * (x1 + x2 + x6 + x7 + x3 + x5) * np.cos(x3 * x5 * x2) + np.tanh(x1 * x2 * x3 * x4 * x5 * x6 * x7 * x8) * np.exp(-np.abs(x1 - x8 + x4 - x5))]",
+     "train": 1.0,
+     "val": 0.918388564002599,
+     "test": 0.9233268356075374,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 3.206767742240164e-09,
+     "col_max": 3.577943243207637,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.sin(x4 * x8 * np.pi) * (np.maximum(x4 * x1 * x6 + x2, x8 - x3 + x5 * x7) ** 2) + np.cos(x3 * x5 * x2) * np.tanh((x1 + x2 + x3 + x4 + x5 + x6 + x7 + x8) * np.abs(x1 - x8)) * np.exp(-np.abs(x4 - x5))]",
+     "train": 1.0,
+     "val": 0.9117608836907083,
+     "test": 0.9139701104613386,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 0.0011259928674830877,
+     "col_max": 1.7802779797256227,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.sin(x8 * np.maximum(x1 * x4 * x6, x7 * x5)) * np.cos(x2 * x3) * (x1 + x2 + x3 + x4 + x5 + x6 + x7 + x8) + np.tanh(x4 * x8 - x3 * x5) * np.abs(x1 - x6 + x7 - x2) * np.exp(-np.abs(x1 * x2 - x3 * x4))]",
+     "train": 1.0,
+     "val": 0.9108512020792723,
+     "test": 0.9135802469135802,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": -0.3762065124957715,
+     "col_max": 1.7412751343787616,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.tanh(x4 * x8 + x1 * x2) * np.maximum(x4 * x1 * x6 + x2, x8 - x3 + x5 * x7) * (x1 + x2 + x6 + x7 + x3 + x5 + x4 + x8) * np.cos(x3 * x5 * x2 * x1) + np.sin(x1 * x2 * x3 * x4 * x5 * x6 * x7 * x8) * np.exp(-np.abs(x1 - x8 + x4 - x5 + x6 - x7))]",
+     "train": 1.0,
+     "val": 0.918388564002599,
+     "test": 0.9200779727095516,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 4.572874022034465,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.sin(x4 * x8 - x1 * x2) * np.maximum(x4 * x1 * x6 * x3 + x2, x8 - x3 + x5 * x7 * x1) * (x1 + x2 + x6 + x7 + x3 + x5 + x4 + x8) * np.cos(x3 * x5 * x2 * x1 * x6) + np.tanh(x1 * x2 * x3 * x4 * x5 * x6 * x7 * x8) * np.exp(-np.abs(x1 - x8 + x4 - x5 + x6 - x7 + x2 - x3))]",
+     "train": 1.0,
+     "val": 0.9196881091617933,
+     "test": 0.9231968810916179,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": -3.7102799942262545,
+     "col_max": 0.41267535203364364,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.sin(x8 * x6 + x4 * x2) * np.maximum(x1 * x2 * x3 + x6, x5 * x7 + x4 - x8) * (x1 + x2 + x3 + x4 + x5 + x6 + x7 + x8) * np.cos(x1 * x3 * x5 * x7) + np.tanh(x1 * x2 * x3 * x4 * x5 * x6 * x7 * x8) * np.exp(-np.abs(x1 - x2 + x3 - x4 + x5 - x6 + x7 - x8))]",
+     "train": 1.0,
+     "val": 0.9147498375568551,
+     "test": 0.918648473034438,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 4.7206150738477,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(x4 * x1 * x6 + x2, x8 - x3 + x5 * x7) * (x1 + x2 + x3 + x4 + x5 + x6 + x7 + x8) * np.tanh(x1 * x2 * x3 * x4 * x5 * x6 * x7 * x8) + np.sin(x4 * x8 + x1 * x2 * x3 * x5 * x6 * x7) * np.cos(x3 * x5 * x1 * x2 * x4 * x6 * x7 * x8) * (np.abs(x1 - x8 + x2 - x3 + x4 - x5 + x6 - x7) + np.tanh(x1 * x2 * x3 * x4 * x5 * x6 * x7 * x8))]",
+     "train": 1.0,
+     "val": 0.91137102014295,
+     "test": 0.9139701104613386,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x9 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 0.4147377337319138,
+     "source": "proposed"
+    },
+    {
+     "rule": "x9 = [np.maximum(np.sin(x4 * x6) * (x1 + x2 + x3), np.cos(x5 * x7) * (x8 - x1)) * np.tanh((x1 + x2 + x3 + x4 + x5 + x6 + x7 + x8) * (x2 * x4 + x6 * x8)) + np.maximum(x1 * x3 * x5 * x7, x2 * x4 * x6 * x8) * np.sin(x1 + x2 + x3 + x4 + x5 + x6 + x7 + x8) * np.exp(-np.abs(x1 - x2 + x3 - x4 + x5 - x6 + x7 - x8))]",
+     "train": 1.0,
+     "val": 0.9155295646523717,
+     "test": 0.9164392462638077,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": -0.11089963003203696,
+     "col_max": 0.6147127985712781,
+     "source": "proposed"
+    }
+   ],
+   "done": true,
+   "best_rule": "x9 = [np.sin(x4 * x8 - x1 * x2) * np.maximum(x4 * x1 * x6 * x3 + x2, x8 - x3 + x5 * x7 * x1) * (x1 + x2 + x6 + x7 + x3 + x5 + x4 + x8) * np.cos(x3 * x5 * x2 * x1 * x6) + np.tanh(x1 * x2 * x3 * x4 * x5 * x6 * x7 * x8) * np.exp(-np.abs(x1 - x8 + x4 - x5 + x6 - x7 + x2 - x3))]",
+   "accepted": true
+  },
+  {
+   "target": 10,
+   "trajectory": [
+    {
+     "rule": "x10 = [x4 * x1]",
+     "train": 1.0,
+     "val": 0.92046783625731,
+     "test": 0.9247563352826511,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x10 > 0.00:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.12:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x10 > 0.03:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 0.8720954321000001,
+     "source": "initial"
+    },
+    {
+     "rule": "x10 = [np.maximum(x4 * x1, x3 * x5 - x2 * x6)]",
+     "train": 1.0,
+     "val": 0.9176088369070825,
+     "test": 0.92046783625731,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x10 > 0.06:\n      if x1 > 0.01:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x3 > 0.05:\n        y = 0.\n      else:\n        y = 1.\n  else:\n    if x10 > 0.06:\n      if x3 > 0.86:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.43:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x10 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 2.60634e-06,
+     "col_max": 0.8720954321000001,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.clip(x4 * x1 + x7 * x8 - np.abs(x9 - x2), 0, 1)]",
+     "train": 1.0,
+     "val": 0.9209876543209876,
+     "test": 0.9270955165692008,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 0.9597101809551591,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.tanh(x4 * x1 * x7 + x3 * x5 * x8 - np.abs(x9 - x6))]",
+     "train": 1.0,
+     "val": 0.918388564002599,
+     "test": 0.9225471085120208,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x10 > 0.02:\n      if x1 > 0.01:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.08:\n        y = 1.\n      else:\n        y = 0.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": -0.7257537331758042,
+     "col_max": 0.43727870178470113,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.sin(x4 * x1 * x7) * np.cos(x3 * x5 * x8) - np.abs(x9 - x2) * x6]",
+     "train": 1.0,
+     "val": 0.9215074723846653,
+     "test": 0.9233268356075374,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": -0.40749680449776954,
+     "col_max": 0.7295935475118931,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.cos(x4 * x1 * x7 + x3 * x5 * x8) * np.tanh(x9 + x2 + x6)]",
+     "train": 1.0,
+     "val": 0.9205977907732293,
+     "test": 0.9252761533463287,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x10 > 0.43:\n        y = 0.\n      else:\n        y = 1.\n",
+     "col_min": 0.5281554231531536,
+     "col_max": 0.9582217857996193,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.tan(x4 * x1 * x7) + np.sin(x3 * x5 * x8) - np.cos(x9 * x2 * x6)]",
+     "train": 1.0,
+     "val": 0.9187784275503573,
+     "test": 0.9212475633528265,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x10 > 0.02:\n      if x1 > 0.01:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x3 > 0.05:\n        y = 0.\n      else:\n        y = 1.\n  else:\n    if x10 > 0.02:\n      if x3 > 0.86:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.43:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x10 > 0.12:\n        y = 1.\n      else:\n        y = 0.\n",
+     "col_min": -0.9999983302467866,
+     "col_max": 0.1670183436475019,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.sin(np.maximum(x4 * x1, x3 * x5)) * np.cos(x7 * x8 * x9) + np.tanh(x2 * x6)]",
+     "train": 1.0,
+     "val": 0.9182586094866797,
+     "test": 0.9215074723846653,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x10 > 0.07:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x10 > 0.08:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": 2.5043113719801778e-05,
+     "col_max": 0.8275654820676513,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.maximum(x4 * x1 * x7 + x3 * x5 * x8, x9 * x2 * x6) * np.tanh(x4 * x1 - x9)]",
+     "train": 1.0,
+     "val": 0.9194282001299545,
+     "test": 0.9225471085120208,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x10 > 0.40:\n        y = 0.\n      else:\n        y = 1.\n",
+     "col_min": -0.3898699703254862,
+     "col_max": 0.35567207076157026,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.tanh(x4 * x1 * x7 + x3 * x5 * x8) * np.cos(x9 * x2 * x6) + (x4 * x1 - x9 * x6)]",
+     "train": 1.0,
+     "val": 0.9194282001299545,
+     "test": 0.9217673814165043,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x10 > 0.23:\n      if x1 > 0.01:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.08:\n        y = 1.\n      else:\n        y = 0.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x10 > 0.28:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": -0.4291277763716589,
+     "col_max": 1.5385084724085836,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.power(x4 * x1 * x7 + 1, x3 * x5 * x8) * np.cos((x9 + x2 + x6) * (x4 * x1))]",
+     "train": 1.0,
+     "val": 0.916829109811566,
+     "test": 0.9207277452891488,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x10 > 0.95:\n    if x1 > 0.88:\n      if x9 > 0.88:\n        y = 1.\n      else:\n        y = 0.\n    else:\n      if x6 > 0.00:\n        y = 1.\n      else:\n        y = 0.\n  else:\n    if x7 > 0.43:\n      if x1 > 0.89:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 0.33714370368226415,
+     "col_max": 1.036257875209057,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.tanh(x4 * x1 * x7 * x3 * x5 * x8) + np.sin((x9 - x2) * x6) * np.cos(x4 + x1 + x7)]",
+     "train": 1.0,
+     "val": 0.9199480181936323,
+     "test": 0.9234567901234568,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": -0.08756550296832963,
+     "col_max": 0.17350733044208183,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.sin(x4 * x1 * x7 + x9 * x2) * np.tanh((x3 * x5 * x8) * (x6 + 1)) + (x4 * x1 - x9 * x6)]",
+     "train": 1.0,
+     "val": 0.9185185185185185,
+     "test": 0.9220272904483431,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": -0.5827573488285094,
+     "col_max": 1.074749141932838,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.clip(x4 * x1 * x7 + x3 * x5 * x8 - np.abs(x9 - x2) * np.sin(x6), 0, 1) * np.tanh(x4 * x1 + x9)]",
+     "train": 1.0,
+     "val": 0.9182586094866797,
+     "test": 0.9207277452891488,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x10 > 0.02:\n      if x1 > 0.01:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.41:\n        y = 1.\n      else:\n        y = 0.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x10 > 0.13:\n        y = 1.\n      else:\n        y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 0.7816356514684134,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.sin(x4 * x1 * x7 + x3 * x5 * x8) * np.cos(x9 * x2 * x6) * (x4 * x1 - x9 + 1)]",
+     "train": 1.0,
+     "val": 0.918388564002599,
+     "test": 0.9205977907732293,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x10 > 0.00:\n      if x1 > 0.01:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.08:\n        y = 1.\n      else:\n        y = 0.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 1.0576832697711746e-07,
+     "col_max": 1.0524730004663356,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.tanh(x4 * x1 * x7 + x3 * x5 * x8 + x9 * x2 * x6) * np.sin(x4 * x1 - x9 + x7 - x3)]",
+     "train": 1.0,
+     "val": 0.9198180636777128,
+     "test": 0.92046783625731,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x10 > 0.34:\n        y = 0.\n      else:\n        y = 1.\n",
+     "col_min": -0.44320258347809394,
+     "col_max": 0.4657059885750848,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.sin(x4 * x1 * x7 + x6) * np.tanh(x3 * x5 * x8 - x9 * x2) + np.cos((x4 - x9) * (x1 + x2))]",
+     "train": 1.0,
+     "val": 0.9222871994801819,
+     "test": 0.9255360623781677,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 0.3772826203646047,
+     "col_max": 1.0575942044014215,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.tanh(x4 * x1 * x7 + x3 * x5 * x8 + x9 * x2 * x6) * np.cos(x4 * x1 - x9 + x7 - x3) + np.sin(x4 * x1 * x7) * np.tanh(x3 * x5 * x8)]",
+     "train": 1.0,
+     "val": 0.9190383365821962,
+     "test": 0.9212475633528265,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": -0.02265317841782869,
+     "col_max": 0.8572033102200969,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.tanh(x4 * x1 * x7 + x3 * x5 * x8 + x9 * x2 * x6) * np.cos(x4 * x1 - x9 + x7 - x3) + np.sin(x4 * x1 * x7) - np.abs(x9 - x2) * np.cos(x6)]",
+     "train": 1.0,
+     "val": 0.9220272904483431,
+     "test": 0.9246263807667316,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": -0.918571442579283,
+     "col_max": 1.2289448262384444,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.exp(-np.abs(x4 * x1 - x3 * x5) * x7) * np.tanh(x8 + x9 + x2 + x6) + np.sin(x4 * x1 * x7 * x8 * x3 * x5 * x9 * x2 * x6)]",
+     "train": 1.0,
+     "val": 0.9194282001299545,
+     "test": 0.9200779727095516,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 0.5288301016073902,
+     "col_max": 0.9866170067870788,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.clip(np.sin(x4 * x1 * x7 * x3) * np.cos(x5 * x8 * x6) + np.tanh((x9 - x2) * (x1 + x4)) - np.abs(x3 * x6 - x8 * x7), 0, 1)]",
+     "train": 1.0,
+     "val": 0.9191682910981157,
+     "test": 0.9248862897985705,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 0.8702825005879362,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.clip(np.sin(x4 * x1 * x7 + x3 * x5 * x8) * np.tanh((x9 - x2) * x6) + np.cos(x4 * x1 - x9 + x2), -1, 1)]",
+     "train": 1.0,
+     "val": 0.9248862897985705,
+     "test": 0.9263157894736842,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 0.05382006291135243,
+     "col_max": 1.0,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.tanh(x4 * x1 * x7 + x3 * x5 * x8 + x9 * x2 * x6) * np.sin(x4 * x1 * x7 - x3 * x5 * x8) + np.cos(x9 * x2 * x6 - x4 * x1) * np.clip(x1 + x2 + x3 + x4 + x5 + x6 + x7 + x8 + x9, 0, 1)]",
+     "train": 1.0,
+     "val": 0.917478882391163,
+     "test": 0.92046783625731,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x10 > 0.57:\n      if x5 > 0.43:\n        y = 1.\n      else:\n        y = 0.\n    else:\n      if x3 > 0.86:\n        y = 1.\n      else:\n        y = 1.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x10 > 0.53:\n        y = 0.\n      else:\n        y = 1.\n",
+     "col_min": 0.7594225977040097,
+     "col_max": 1.1772304805591096,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.clip(np.sin(x4 * x1 * x7 + x3 * x5 * x8 + x6) * np.cos(x9 * x2) + np.tanh((x4 + x1 + x7) * (x3 + x5 + x8) - np.abs(x9 - x2) * x6), -1, 1)]",
+     "train": 1.0,
+     "val": 0.9203378817413905,
+     "test": 0.9234567901234568,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x10 > 0.26:\n      if x1 > 0.01:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x1 > 0.00:\n        y = 1.\n      else:\n        y = 0.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x10 > 0.85:\n    if x1 > 0.88:\n      if x9 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x6 > 0.00:\n        y = 1.\n      else:\n        y = 0.\n  else:\n    if x7 > 0.43:\n      if x6 > 0.00:\n        y = 1.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 0.2573750267569913,
+     "col_max": 1.0,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.clip(np.sin(x4 * x1 * x7 + x3 * x5 * x8 + x9 * x2 * x6) * np.tanh(x4 * x1 - x9 + x7 - x3 + x6) + np.cos((x4 * x1 * x7) * (x3 * x5 * x8) - np.abs(x9 - x2) * np.sin(x6)), -1, 1)]",
+     "train": 1.0,
+     "val": 0.9194282001299545,
+     "test": 0.9192982456140351,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x10 > 0.69:\n        y = 0.\n      else:\n        y = 1.\n",
+     "col_min": 0.5860006974693344,
+     "col_max": 1.0,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.clip(np.sin(x4 * x1 * x7 + x3 * x5 * x8 + x6) * np.tanh(x9 + x2 + x5) * np.cos(x4 * x1 - x9 + x2 * x6) + np.sin(x3 * x5 * x8 - x9 * x2) * np.tanh(x4 * x1 * x7 + x6), -1, 1)]",
+     "train": 1.0,
+     "val": 0.918648473034438,
+     "test": 0.9234567901234568,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x10 > 0.02:\n      y = 1.\n    else:\n      y = 1.\n  else:\n    if x10 > 0.02:\n      y = 1.\n    else:\n      y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      y = 0.\n    else:\n      y = 0.\n  else:\n    if x4 > 0.06:\n      y = 0.\n    else:\n      y = 0.\n",
+     "col_min": -0.0007874816049934824,
+     "col_max": 0.7529206393746979,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.clip(np.sin(x4 * x1 * x7 + x3 * x5 * x8 + x9 * x2 * x6) * np.cos(x4 * x1 * x7 - x3 * x5 * x8) + np.tanh(x4 * x1 - x9 + x2) * np.sin(x6), -1, 1)]",
+     "train": 1.0,
+     "val": 0.9181286549707602,
+     "test": 0.9228070175438596,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x10 > 0.03:\n      if x1 > 0.01:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x3 > 0.05:\n        y = 0.\n      else:\n        y = 1.\n  else:\n    if x10 > 0.04:\n      if x3 > 0.86:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.43:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x10 > 0.18:\n        y = 1.\n      else:\n        y = 0.\n",
+     "col_min": -0.0025252132052927564,
+     "col_max": 0.7700514191518776,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.clip(np.sin(x4 * x1 * x7 + x3 * x5 * x8 + x9 * x2 * x6) * np.cos(x4 * x1 - x9 + x7 - x3 + x6) + np.tanh((x4 * x1 + x7 * x8) * (x9 + x2 + x6 + 1)), -1, 1)]",
+     "train": 1.0,
+     "val": 0.9173489278752437,
+     "test": 0.9229369720597791,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 0.0459632469368,
+     "col_max": 1.0,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.clip(np.sin(x4 * x1 * x7 + x3 * x5 * x8 + x6) * np.tanh(x9 * x2 * (x1 + x4)) + np.cos((x4 - x9) * (x1 + x2 + x7)) * np.abs(x3 - x8 + 1), -1, 1)]",
+     "train": 1.0,
+     "val": 0.9187784275503573,
+     "test": 0.9241065627030539,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 0.041259586424937614,
+     "col_max": 1.0,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.tanh(x4 * x1 * x7 + x3 * x5 * x8 + x9 * x2 * x6) * np.sin(x4 * x1 * x7 + x6) + np.cos(np.clip(x4 * x1 - x9 + x2 + x7 * x3, -1, 1)) * np.tanh((x9 - x2 + 1) * (x6 + 1))]",
+     "train": 1.0,
+     "val": 0.9208576998050683,
+     "test": 0.9269655620532814,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 0.006016888398597291,
+     "col_max": 1.4705553057307308,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.tanh(x4 * x1 * x7 * x3 * x5 * x8) * np.cos(x9 * x2 * x6) + np.sin(np.clip(x4 - x9 + x2 + x7 * x3 - x6, -1, 1))]",
+     "train": 1.0,
+     "val": 0.9208576998050683,
+     "test": 0.9267056530214425,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": -0.7774400129449034,
+     "col_max": 1.0152230183579485,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.tanh(x4 * x1 * x7 + x3 * x5 * x8 + x9 * x2 * x6) * np.sin(x4 * x1 * x7 + x6) * np.cos(x9 - x2) + np.clip(np.sin(x4 * x1 - x6) * np.cos(x7 * x3 * x5 * x8), -1, 1)]",
+     "train": 1.0,
+     "val": 0.9196881091617933,
+     "test": 0.9228070175438596,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x10 > 0.19:\n      if x10 > 0.19:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.47:\n        y = 1.\n      else:\n        y = 0.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x10 > 0.21:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": -0.3075783336125124,
+     "col_max": 1.272341945643991,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.tanh(x4 * x1 * x7 - x3 * x5 * x8 + x9 * x2 * x6) * np.sin(x4 * x1 + x7 + x3 + x5 + x8) + np.cos(np.clip(x4 * x1 * x7 * x3 * x5 * x8 * x9 * x2 * x6, -1, 1)) * np.tanh(x6 - x9 + x2 + 1)]",
+     "train": 1.0,
+     "val": 0.9212475633528265,
+     "test": 0.9238466536712151,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x10 > 0.13:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": -0.1287244608602386,
+     "col_max": 1.0750528887997859,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.tanh(x4 * x1 * x7 + x3 * x5 * x8 + x9 * x2 * x6) * np.sin(x4 + x1 + x7 + x3 + x5 + x8 + x9 + x2 + x6) + np.clip(np.cos(x4 * x1 * x7) - np.abs(x9 - x2) * np.sin(x6), -1, 1)]",
+     "train": 1.0,
+     "val": 0.918388564002599,
+     "test": 0.9211176088369071,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 0.13439474304779891,
+     "col_max": 1.0318886159257594,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.tanh((x4 * x1 * x7 - x3 * x5 * x8) * (x9 * x2 * x6 + 1)) * np.cos(np.clip(x4 * x1 + x7 + x3 + x5 + x8 - x9 - x2 - x6, -1, 1)) + np.sin(x4 * x1 * x7 + x9 * x2) * np.tanh(x6 + 1)]",
+     "train": 1.0,
+     "val": 0.9208576998050683,
+     "test": 0.9218973359324236,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x10 > 0.11:\n        y = 0.\n      else:\n        y = 1.\n",
+     "col_min": -0.21224138464373324,
+     "col_max": 1.0826451952218097,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.clip(np.sin(x4 * x1 * x7 + x9 * x2) * np.cos(x3 * x5 * x8 - x6) + np.tanh((x4 + x1 + x7) * (x9 - x2 + 1) - x3 * x5 * x8 * x6), -1, 1)]",
+     "train": 1.0,
+     "val": 0.9218973359324236,
+     "test": 0.9246263807667316,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 0.014213209634849445,
+     "col_max": 1.0,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.tanh(x4 * x1 * x7 + x9 * x2 * x6) * np.cos(x3 * x5 * x8) + np.sin((x4 + x1 + x7) * (x9 - x2) + x6) - np.abs(x3 * x5 * x8 - x4 * x1 * x7)]",
+     "train": 1.0,
+     "val": 0.9221572449642625,
+     "test": 0.926575698505523,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": -1.3563468092898028,
+     "col_max": 1.3259289321809449,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.tanh(x4 * x1 * x7 + x9 * x2 * x6) * np.sin(x3 * x5 * x8) + np.cos(x4 * x1 - x3 * x5 + x9 - x2) - np.abs(x6 - (x4 * x1 * x7) * (x3 * x5 * x8))]",
+     "train": 1.0,
+     "val": 0.9176088369070825,
+     "test": 0.9216374269005848,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": -0.0003879147707257502,
+     "col_max": 1.041814724702696,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.clip(np.sin(x4 * x1 * x7 + x9 * x2 * x6) * np.cos(x3 * x5 * x8) + np.tanh(x4 * x1 + x7 + x9 + x2 + x6 - x3 * x5 * x8), -1, 1)]",
+     "train": 1.0,
+     "val": 0.9196881091617933,
+     "test": 0.92046783625731,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 0.6768422828116768,
+     "col_max": 1.0,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.tanh(x4 * x1 * x7 + x9 * x2 * x6) * np.sin(x3 * x5 * x8) + np.cos(x4 * x1 - x3 * x5) * np.tanh(x6 * (x9 - x2 + 1)) - np.abs(x4 * x1 * x7 - x3 * x5 * x8 + x9 * x2 * x6)]",
+     "train": 1.0,
+     "val": 0.9181286549707602,
+     "test": 0.9209876543209876,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x10 > 0.51:\n      if x5 > 0.44:\n        y = 1.\n      else:\n        y = 0.\n    else:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x10 > 0.43:\n        y = 0.\n      else:\n        y = 1.\n",
+     "col_min": -0.6964383980541032,
+     "col_max": 0.6252935667880712,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.clip(np.sin(x4 * x1 * x7 + x9 * x2 * x6) * np.cos(x3 * x5 * x8) + np.tanh((x4 + x1 + x7) * (x9 + x2 + x6 + 1) - (x3 + x5 + x8) * (x6 + 1)), -1, 1)]",
+     "train": 1.0,
+     "val": 0.91591942820013,
+     "test": 0.9234567901234568,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x10 > 0.29:\n        y = 0.\n      else:\n        y = 1.\n",
+     "col_min": -0.8021408463769064,
+     "col_max": 1.0,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.tanh(x4 * x1 * x7 + x9 * x2 * x6) * np.sin(x3 * x5 * x8) + np.cos(x4 * x1 * x7 - x3 * x5 * x8) * np.tanh(x9 - x2 + x6 + 1) - np.abs(np.sin(x4 * x1 * x7 * x6) * np.cos(x3 * x5 * x8 * x9))]",
+     "train": 1.0,
+     "val": 0.9212475633528265,
+     "test": 0.9268356075373619,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 0.007644051572083278,
+     "col_max": 1.0554263641247414,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.tanh(x4 * x1 * x7 + x9 * x2 * x6) * np.sin(x3 * x5 * x8) + np.cos(x4 * x1 * x7 - x9 * x2 * x6) * np.clip(x4 + x1 + x7 + x3 + x5 + x8 + x9 + x2 + x6, -1, 1)]",
+     "train": 1.0,
+     "val": 0.9212475633528265,
+     "test": 0.92046783625731,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x10 > 0.71:\n    if x1 > 0.88:\n      if x9 > 0.88:\n        y = 1.\n      else:\n        y = 0.\n    else:\n      if x6 > 0.00:\n        y = 1.\n      else:\n        y = 0.\n  else:\n    if x7 > 0.43:\n      if x1 > 0.89:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 0.7325723353854141,
+     "col_max": 1.1087537881709566,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.clip(np.sin(x4 * x1 * x7 + x3 * x5 * x8 + x9 * x2 * x6) * np.tanh((x4 + x1 + x7) * (x9 + x2 + x6) - x3 * x5 * x8) + np.cos(np.abs(x9 - x2) * x6 * np.tanh(x4 * x1 * x7)), -1, 1)]",
+     "train": 1.0,
+     "val": 0.9165692007797271,
+     "test": 0.9226770630279402,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 1.0,
+     "col_max": 1.0,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.clip(np.sin(x4 * x1 * x7 + x9 * x2) * np.tanh(x3 * x5 * x8 + x6) + np.cos((x4 + x1 + x7) * (x3 + x5 + x8) - (x9 + x2 + x6)), -1, 1)]",
+     "train": 1.0,
+     "val": 0.9199480181936323,
+     "test": 0.9230669265756986,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": -0.9330863018508987,
+     "col_max": 1.0,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.clip(np.sin(x4 * x1 * x7 + x9 * x2 * x6) * np.cos(x3 * x5 * x8 + x6) + np.tanh((x4 * x1 - x3 * x5) * (x7 * x8 - x9 * x2) + x6), -1, 1)]",
+     "train": 1.0,
+     "val": 0.9185185185185185,
+     "test": 0.9216374269005848,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x10 > 0.14:\n        y = 0.\n      else:\n        y = 1.\n",
+     "col_min": -0.17406294482050305,
+     "col_max": 0.9542921506467142,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.tanh(x4 * x1 * x7 * x3 * x5 * x8) * np.cos(x9 * x2 * x6) + np.sin((x4 + x1 + x7) * (x3 + x5 + x8) - (x9 + x2 + x6)) - np.abs(np.tanh(x4 - x9) * np.sin(x1 + x2 + x3 + x4 + x5 + x6 + x7 + x8 + x9))]",
+     "train": 1.0,
+     "val": 0.9202079272254711,
+     "test": 0.9231968810916179,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": -1.4815812274427032,
+     "col_max": 1.004232306110192,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.clip(np.sin(x4 * x1 * x7 + x3 * x5 * x8 + x9 * x2 * x6) * np.tanh(x4 * x1 - x9 + x7 - x3 + x6) + np.cos((x4 + x1 + x7) * (x3 + x5 + x8) - (x9 + x2 + x6)), -1, 1)]",
+     "train": 1.0,
+     "val": 0.9189083820662768,
+     "test": 0.9224171539961014,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": -1.0,
+     "col_max": 1.0,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.tanh(x4 * x1 * x7 * x3 * x5 * x8) * np.cos(x9 * x2 * x6) + np.sin((x4 + x1 + x7) * (x3 + x5 + x8) - (x9 + x2 + x6)) - np.abs(np.tanh(x4 * x1 - x3 * x5) * np.cos(x9 * x6))]",
+     "train": 1.0,
+     "val": 0.9203378817413905,
+     "test": 0.9212475633528265,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": -1.3268673205794717,
+     "col_max": 1.0197699794230275,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.tanh(x4 * x1 * x7 + x9 * x2 * x6) * np.sin(x3 * x5 * x8) + np.cos(x4 * x1 - x3 * x5 + x9 - x2) * np.tanh(x6 * (x7 + 1))]",
+     "train": 1.0,
+     "val": 0.9185185185185185,
+     "test": 0.9233268356075374,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": 0.0,
+     "col_max": 0.9267671502268497,
+     "source": "proposed"
+    },
+    {
+     "rule": "x10 = [np.clip(np.sin(x4 * x1 * x7 + x9 * x2 * x6) * np.cos(x3 * x5 * x8) + np.tanh(x4 * x1 + x7 + x3 + x5 + x8 + x9 + x2 + x6) * np.sin(x4 * x1 - x3 * x5 + x9 - x6), -1, 1)]",
+     "train": 1.0,
+     "val": 0.9185185185185185,
+     "test": 0.9209876543209876,
+     "tree": "if x4 > 0.07:\n  if x4 > 0.08:\n    if x1 > 0.01:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x4 > 0.09:\n        y = 1.\n      else:\n        y = 1.\n  else:\n    if x3 > 0.24:\n      if x1 > 0.43:\n        y = 1.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.37:\n        y = 1.\n      else:\n        y = 0.\nelse:\n  if x5 > 0.27:\n    if x1 > 0.43:\n      if x1 > 0.88:\n        y = 0.\n      else:\n        y = 0.\n    else:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 0.\n  else:\n    if x4 > 0.06:\n      if x4 > 0.06:\n        y = 0.\n      else:\n        y = 1.\n    else:\n      if x5 > 0.20:\n        y = 0.\n      else:\n        y = 0.\n",
+     "col_min": -0.42975160856000655,
+     "col_max": 1.0,
+     "source": "proposed"
+    }
+   ],
+   "done": true,
+   "best_rule": "x10 = [np.clip(np.sin(x4 * x1 * x7 + x3 * x5 * x8) * np.tanh((x9 - x2) * x6) + np.cos(x4 * x1 - x9 + x2), -1, 1)]",
+   "accepted": true
+  }
+ ],
+ "accepted": [
+  {
+   "rule": "x9 = [np.sin(x4 * x8 - x1 * x2) * np.maximum(x4 * x1 * x6 * x3 + x2, x8 - x3 + x5 * x7 * x1) * (x1 + x2 + x6 + x7 + x3 + x5 + x4 + x8) * np.cos(x3 * x5 * x2 * x1 * x6) + np.tanh(x1 * x2 * x3 * x4 * x5 * x6 * x7 * x8) * np.exp(-np.abs(x1 - x8 + x4 - x5 + x6 - x7 + x2 - x3))]",
+   "train": 1.0,
+   "val": 0.9196881091617933,
+   "test": 0.9231968810916179,
+   "col_min": -3.7102799942262545,
+   "col_max": 0.41267535203364364
+  },
+  {
+   "rule": "x10 = [np.clip(np.sin(x4 * x1 * x7 + x3 * x5 * x8) * np.tanh((x9 - x2) * x6) + np.cos(x4 * x1 - x9 + x2), -1, 1)]",
+   "train": 1.0,
+   "val": 0.9248862897985705,
+   "test": 0.9263157894736842,
+   "col_min": 0.05382006291135243,
+   "col_max": 1.0
+  }
+ ],
+ "finished": true,
+ "timing": {
+  "llm": 741.7581210136414,
+  "xgboost": 926.7040112018585,
+  "cart": 23.237560272216797,
+  "rule": 20.1274094581604
+ },
+ "llm_calls": 101,
+ "invalid_answers": 1,
+ "prompt_tokens": 85926,
+ "completion_tokens": 9616,
+ "final": {
+  "val": 0.9248862897985705,
+  "test": 0.9263157894736842,
+  "test_error": 7.36842105263158,
+  "baseline_error": 8.369070825211178,
+  "rules": [
+   "x9 = [np.sin(x4 * x8 - x1 * x2) * np.maximum(x4 * x1 * x6 * x3 + x2, x8 - x3 + x5 * x7 * x1) * (x1 + x2 + x6 + x7 + x3 + x5 + x4 + x8) * np.cos(x3 * x5 * x2 * x1 * x6) + np.tanh(x1 * x2 * x3 * x4 * x5 * x6 * x7 * x8) * np.exp(-np.abs(x1 - x8 + x4 - x5 + x6 - x7 + x2 - x3))]",
+   "x10 = [np.clip(np.sin(x4 * x1 * x7 + x3 * x5 * x8) * np.tanh((x9 - x2) * x6) + np.cos(x4 * x1 - x9 + x2), -1, 1)]"
+  ]
+ }
+}
