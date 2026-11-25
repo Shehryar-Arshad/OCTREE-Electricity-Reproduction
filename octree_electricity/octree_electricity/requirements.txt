@@ -1,0 +1,21 @@
+# Core
+numpy
+pandas
+scikit-learn
+xgboost
+matplotlib
+
+# LLM access through an OpenAI-compatible API (Groq, Gemini, OpenRouter, Ollama)
+openai
+
+# Deployment
+streamlit==1.67.0          # tested version; the app uses its width= options
+
+# Notebook
+jupyter
+
+# Optional: only for running the authors' Llama 2 model locally on a GPU (provider "hf_local")
+# torch
+# transformers
+# accelerate
+# bitsandbytes
