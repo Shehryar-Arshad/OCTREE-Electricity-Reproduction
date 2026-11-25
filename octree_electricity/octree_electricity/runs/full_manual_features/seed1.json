@@ -1,0 +1,107 @@
+{
+ "config": {
+  "seed": 1,
+  "max_features": 2,
+  "n_estimators": null,
+  "candidates": [
+   "x4 - x6",
+   "x5 - x7",
+   "x4 * x5",
+   "np.sin(2 * np.pi * x3)",
+   "np.cos(2 * np.pi * x3)",
+   "1.0 if 14 / 47 <= x3 < 44 / 47 else 0.0",
+   "x8 * (x4 - x6)"
+  ]
+ },
+ "baseline": {
+  "train": 1.0,
+  "val": 0.9139701104613386,
+  "test": 0.9163092917478882
+ },
+ "rounds": [
+  {
+   "target": 9,
+   "tried": [
+    {
+     "train": 1.0,
+     "val": 0.9135802469135802,
+     "test": 0.917738791423002,
+     "rule": "x9 = [x4 - x6]",
+     "name": "price_gap"
+    },
+    {
+     "train": 1.0,
+     "val": 0.9126705653021443,
+     "test": 0.9120207927225471,
+     "rule": "x9 = [x5 - x7]",
+     "name": "demand_gap"
+    },
+    {
+     "train": 1.0,
+     "val": 0.90682261208577,
+     "test": 0.9107212475633528,
+     "rule": "x9 = [x4 * x5]",
+     "name": "price_x_demand"
+    },
+    {
+     "train": 1.0,
+     "val": 0.9087719298245615,
+     "test": 0.91137102014295,
+     "rule": "x9 = [np.sin(2 * np.pi * x3)]",
+     "name": "period_sin"
+    },
+    {
+     "train": 1.0,
+     "val": 0.9096816114359974,
+     "test": 0.9120207927225471,
+     "rule": "x9 = [np.cos(2 * np.pi * x3)]",
+     "name": "period_cos"
+    },
+    {
+     "train": 1.0,
+     "val": 0.9112410656270306,
+     "test": 0.9144899285250162,
+     "rule": "x9 = [1.0 if 14 / 47 <= x3 < 44 / 47 else 0.0]",
+     "name": "peak_hours"
+    },
+    {
+     "train": 1.0,
+     "val": 0.9115009746588694,
+     "test": 0.9115009746588694,
+     "rule": "x9 = [x8 * (x4 - x6)]",
+     "name": "transfer_x_price_gap"
+    }
+   ],
+   "best": "price_gap",
+   "accepted": false
+  }
+ ],
+ "accepted": [],
+ "llm_calls": 0,
+ "invalid_answers": 0,
+ "prompt_tokens": 0,
+ "completion_tokens": 0,
+ "final": {
+  "val": 0.9139701104613386,
+  "test": 0.9163092917478882,
+  "test_error": 8.369070825211178,
+  "baseline_error": 8.369070825211178,
+  "rules": [],
+  "names": []
+ },
+ "all": {
+  "rules": [
+   "x9 = [x4 - x6]",
+   "x10 = [x5 - x7]",
+   "x11 = [x4 * x5]",
+   "x12 = [np.sin(2 * np.pi * x3)]",
+   "x13 = [np.cos(2 * np.pi * x3)]",
+   "x14 = [1.0 if 14 / 47 <= x3 < 44 / 47 else 0.0]",
+   "x15 = [x8 * (x4 - x6)]"
+  ],
+  "val": 0.908641975308642,
+  "test": 0.9109811565951916,
+  "test_error": 8.901884340480837
+ },
+ "seconds": 87.1735007762909
+}
